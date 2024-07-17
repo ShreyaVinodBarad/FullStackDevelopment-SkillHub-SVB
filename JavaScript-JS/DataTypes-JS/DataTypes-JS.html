@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types - JS</title>
+</head>
+<body>
+    <script>
+        // 1. String Data Type
+        const a = "10";
+        // 2. Number Data Type
+        const y = 10;
+        console.warn(typeof(a));
+        console.log(typeof(y));
+        // Concatenation 
+        const x = 23
+        // const b = "10";
+        const b = 2;
+        const c = "20";
+        console.log(b + c);
+        // Test
+        // console.log(x + b + c);   --> 231020
+        console.log(x + b + c);   
+        /*
+        const a = "2";
+        const c = 2
+        const b = 3;
+        console.log(a + c + b)  --> 223
+        After string if something is added will be considered as 
+        String and here concatenation happens.
+        */
+
+        // 3. Boolean Data Type
+        const p = true;
+        const e = "true";
+        console.log(typeof(p));
+        console.log(typeof(e));
+
+        // 4. Undefined Data Type - When only Declared 
+        let test;
+        console.log(typeof(test));
+
+        // 5. Object Data Type  
+        // 1. When the variable contains the value 'null'
+        let dummy = null;
+        console.log(typeof(dummy));
+        // 2. When array is initilized.
+        let arr = [];
+        console.log(typeof(arr));
+        // 3. Object data type when curly braces are used.
+        let obj = {};
+        console.log(typeof(obj));
+
+        // 6. BigInt Data Type: When BigInt function is used.
+        let bI = BigInt("12");
+        console.log(typeof(bi));
+
+        // 7. Symbol Data Type: When Symbol Function is used.
+        let sym = Symbol("aa");
+        console.log(typeof(sym));
+
+        /*
+        let a = 10;
+        let b = "10";
+        1. console.log(typeof(a));  --> Number
+        2. console.log(typeof typeof(a));
+        --> Number here will be string so the data type will be 
+        string.
+        i.e. typeof(a)--> number
+        typeof(number)--> string
+        3. console.log(typeof(a + b)); --> Data Type is string - 
+        whether the num be above string or below string the data type will be 
+        string.
+        */        
+    </script>
+</body>
+</html>

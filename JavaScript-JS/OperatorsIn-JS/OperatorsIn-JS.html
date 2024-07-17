@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators In JavaScript</title>
+</head>
+<body>
+    <script>
+
+        // 1. Arithematic Operators
+        let a = 10, b = 5;
+        // a. Addition
+        console.log("a + b = ", a + b);
+        // b. Subtraction
+        console.log("a - b = ", a - b);
+        // c. Multiplication
+        console.log("a * b = ", a * b);
+        // d. Division
+        console.log("a / b = ", a / b);
+        // e. Power
+        // a to the Power 2
+        // 10 * 10 = 100
+        console.log("a ^ 2 = ", a ** 2);
+        // a to the Power 3
+        // 10 * 10 * 10 = 1000
+        console.log("a ^ 3 = ", a ** 3);
+        // f. Modulus
+        let c = 12;
+        console.log("a % 2 = ", c % b);
+
+        let x = 10;
+        // Increment and Decrement
+        x++;
+        console.log(x);
+        // Above value is 11
+        x--;
+        console.log(x);
+        // Above value is 10
+        // Types of Increment and Decrement
+        // 1. Postfix
+        let z = 10;
+        // - First Prints the Value as it is
+        // Ans: 10
+        console.log(z++);
+        // - Then does the increment with the value and gives the incremented
+        // value
+        // Ans: 11
+        console.log(z)
+        // 2. Prefix
+        let h = 10;
+        // - First increments the value and print
+        // Ans: 11
+        console.log(++h);
+        // - Prints the value incremented as it is
+        // Ans: 11
+        console.log(h);
+        /*
+            Same Types for Decrement Operator
+        */
+       
+        // Comparison Operators 
+        // Gives output in Boolean
+        /*
+        Types of Comparsion Operators:-
+            Types of Operators              Symbols
+            1. Less Than                    <
+            2. Greater Than                 >
+            3. Equal                        ==
+            4. Strict Equal                 ===
+            5. Not Equal                    !=
+            6. Not Strict Equal             !==
+            7. Less Than or Equal           <=
+            8. Greater Than or Equal        >=
+            9. Ternary                      ?
+        */
+
+        // Equal  
+        console.log(10 == 10);
+        // Above here only value is checked and if value are same than
+        // it's output is "true"
+
+        // Strict Equal
+        console.log(10 === "10");
+        // Above here value + Data Type is checked and if they satisfy both the things
+        // then only output will be "true"
+
+        // Not Equal
+        console.log(10 != 10);
+        /* 
+        Above expression is solved by the steps:-
+        - (10 = 10) - true
+        - !(true) - false
+        */
+        console.log(10 != "10");
+        /* 
+        Above expression is solved by the steps:-
+        - (10 = "10") - true
+        - !(true) - false
+        */
+
+        // Not Strict Equal
+        console.log(10 !== "10");
+        /* 
+        Above expression is solved by the steps:-
+        - (10 === "10") - false
+        - !(false) - true
+        */
+        console.log("10" !== "10");
+        /* 
+        Above expression is solved by the steps:-
+        - ("10" === "10") - true
+        - !(true) - false
+        */
+    </script>
+</body>
+</html>

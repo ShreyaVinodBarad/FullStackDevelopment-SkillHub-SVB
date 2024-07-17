@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // TDZ - Temporal Dead Zone
+        // TDZ is a area where varaibles will be inaccessible.
+        /*
+        -IMP:
+        When ever the variable is Declared then above it is TDZ. 
+        Here it does not depend whether the variable is declared
+        + initilized.
+        */
+        console.log(a)
+        // -----------------------TDZ is Above the let----------------------
+        let a = 10;
+    </script>
+</body>
+</html>
