@@ -30,10 +30,12 @@
         console.log("a % 2 = ", c % b);
 
         let x = 10;
-        // Increment and Decrement
+        // 2. Increment and Decrement Operator
+        // a. Increment Operator
         x++;
         console.log(x);
         // Above value is 11
+        // b. Decrement Operator
         x--;
         console.log(x);
         // Above value is 10
@@ -59,7 +61,7 @@
             Same Types for Decrement Operator
         */
        
-        // Comparison Operators 
+        // 3. Comparison Operators 
         // Gives output in Boolean
         /*
         Types of Comparsion Operators:-
@@ -112,6 +114,62 @@
         - ("10" === "10") - true
         - !(true) - false
         */
+
+        // Task - 17/ July/ 2024, Wednesday
+        let k = 10, y = 10;
+        k++;   
+        ++y;
+        console.log(k != y);
+        console.log(k !== y);
+
+        // 4. Assignment Operators
+        let r = 10;
+        // r += 10;  
+        // r = r + 10
+        // console.log(r); 
+        // Ans: 20
+        // r **= 2
+        // console.log(r);
+        // Ans: 100
+
+        /*
+        5. Logical Operators
+        - AND ==> &&
+        - OR  ==> ||
+        - NOT ==> !
+
+        1. AND Operator:-
+        true    &&   false    ==>      false
+        false   &&   true     ==>      false
+        false   &&   false    ==>      false
+        true    &&   true     ==>      true
+        2. OR Operator:-
+        true    ||   false    ==>      true
+        false   ||   true     ==>      true
+        false   ||   false    ==>      false
+        true    ||   true     ==>      true
+        3. NOT Operator:-
+        !true == false
+        !false == true
+        */
+
+        // 6. Comparsion Operator
+        let s = 10;
+        let u = 20;
+        console.log(s <= u);
+        /*
+        Meaning of "s<=u" is:-
+        s < u || s == u
+        10 < 20 || 10 == 20
+        true || false
+        Ans: true
+        */
+
+        // 7. Ternary Operator : Same as If - Else 
+        let l = s > 100 ? "Hello World!" : "Bye!";
+        // Condition ? If true will execute this : If false will execute this
+        console.log(l);
+        
     </script>
 </body>
 </html>

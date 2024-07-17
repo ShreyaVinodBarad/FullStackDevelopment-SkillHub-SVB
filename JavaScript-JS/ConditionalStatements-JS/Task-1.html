@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    <script>
+        let sub1 = 50;
+        let sub2 = 50;
+        let sub3 = 0;
+        let total = sub1 + sub2 + sub3;
+        let percent = total / 300 * 100;
+        console.log(total);
+        console.log(percent);
+        /*
+        General Code without Condsedering the Marks in Subjects
+        */ 
+        /* Method - 1
+        if(percent < 35){
+            console.log("Fail");
+        }
+        else{
+            console.log("Pass");
+        }
+        // Method - 2
+        percent < 35 ? console.log("Fail") : console.log("Pass");
+        */
+        /*
+        Here if a student fails in one subject than the code
+        will be:-
+        */
+        // Method - 1
+        if(percent < 35 || sub1 < 35 || sub2 < 35 || sub3 < 35)
+        {
+            console.log("Fail");
+        }
+        else{
+            console.log("Pass");
+        }
+
+        // Method -2 
+        (percent < 35 || sub1 < 35 || sub2 < 35 || sub3 < 35) 
+        ? console.log("Fail") 
+        : console.log("Pass");
+    </script>
+</body>
+</html>

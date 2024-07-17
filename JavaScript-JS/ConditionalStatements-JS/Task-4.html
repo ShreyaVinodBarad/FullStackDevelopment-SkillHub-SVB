@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 4</title>
+</head>
+<body>
+    <script>
+        /*
+        Categories     Tax in Percent
+        electronics    18%
+        food           5%
+        dummy          50%
+        */ 
+        const productName = "toy";
+        const price = 500;
+        const category = "dummy";
+        const qty = 2;
+        let tax;
+        if(category === "food"){
+            tax = 5;
+        }
+        else if(category === "electronics"){
+            tax = 18;
+        }
+        else if(category === "dummy"){
+            tax = 50;
+        }
+        let total = price * qty;
+        tax = total / 100 * tax;
+        let finalBill = total + tax;
+        console.log(total);
+        console.log(tax);
+        console.log(finalBill);
+        console.log(`total = ${total}, tax = ${tax}, finalBill = ${finalBill}`);
+    </script>
+</body>
+</html>
+
+<!--
+18/ July/ 2024, Thursday  
+Tommorow's Plan 
+1. Switch 
+2. Array
+    - push
+    - pop
+    - shift
+    - unshift
+    - slice
+    - splice
+-->

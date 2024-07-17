@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if - else Conditional Statement</title>
+</head>
+<body>
+    <script>
+        /*
+        Method - 1 of Writing if - else
+        */ 
+        let age = 15;
+        if(age < 18)
+        // True --> Minor
+        // False --> Adult
+        {
+            console.log("Minor");
+        }
+        else
+        {
+            console.log("Adult");
+        }
+        /*
+        Method - 2 of Writing if - else
+        */ 
+        // ternary is same as if-else conditional statement 
+        // Way of writing - 1
+        age < 18 ? console.warn("Minor") : console.warn("Adult");
+        // Way of writing - 2
+        age < 18 
+            ? console.warn("Minor") 
+            : console.warn("Adult");
+    </script>
+</body>
+</html>

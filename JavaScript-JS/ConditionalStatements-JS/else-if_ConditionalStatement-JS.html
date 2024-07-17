@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else - if Conditional Statement</title>
+</head>
+<body>
+    <script>
+        const percent = 50.7;
+        if(percent < 35){
+            console.log("Fail")
+        }
+        else if(percent > 35 && percent <= 50){
+            /* 
+            Here if the value is 0.1 greater than 50 than it will
+            not consider this i.e. C as the answer but will consider 
+            B
+            */
+            console.log("C");
+        }
+        else if(percent > 50 && percent <= 60){
+            console.log("B")
+        }
+        else if(percent > 60 && percent <= 75){
+            console.log("A")
+        }
+        else{
+            console.log("A+")
+        }
+    </script>
+</body>
+</html>
