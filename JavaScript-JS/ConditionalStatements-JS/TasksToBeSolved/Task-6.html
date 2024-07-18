@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 6(Switch Statement)</title>
+</head>
+<body>
+    <script>
+        /*
+        Task - 6:-
+        Write JS code to show whether a number is Even or Odd.
+        Use Switch Statement...
+        Explanation:-
+        Input - 1:-
+        const num = 2;
+        Output - 1:-
+        Even Number
+        ---------------
+        Input - 2:-
+        const num = 7;
+        Output - 2:-
+        Odd Number
+        ---------------
+        Input - 3:-
+        const num = 0;
+        Output - 3:-
+        Zero
+        ---------------
+        */ 
+        /*
+        Here "true" is use in the Braces of switch only when we are checking for 
+        conditions.
+        It means the condition is "true" than execute the "true" conditions in 
+        the given case...
+        */
+        const num = 5;
+        switch(true)
+        {
+            case num % 2 === 0:
+                console.log("Even Number!");
+                break;
+            default:
+                console.log("Odd Number!");
+        }
+    </script>
+</body>
+</html>

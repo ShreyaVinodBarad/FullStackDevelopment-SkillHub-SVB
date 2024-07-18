@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 7(Switch Statement)</title>
+</head>
+<body>
+    <script>
+        /*
+        Task - 7:-
+        Find whether a num is divided by 3, by 5, not divisible by both 3 and
+        5 or divisible by both.
+        With Switch Statement...
+        Explanation:-
+        Input - 1:-
+        const num = 10;
+        Output - 1:-
+        Divisible by 5!
+        --------------------------
+        Input - 2:-
+        const num = 9;
+        Output - 2:-
+        Divisible by 3!
+        --------------------------
+        Input - 3:-
+        const num = 15;
+        Output - 3:-
+        Divisible by both 3 and 5!
+        --------------------------
+        Input - 4:-
+        const num = 19;
+        Output - 4:-
+        Not Divisible by 3 and 5!
+        --------------------------
+        */
+        /*
+        Here "true" is use in the Braces of switch only when we are checking for 
+        conditions.
+        It means the condition is "true" than execute the "true" conditions in 
+        the given case...
+        */ 
+        const num = 10;
+        switch(true)
+        {
+            case num % 3 == 0 && num % 5 == 0:
+                console.log("Disvisible by Both 3 and 5!");
+                break;
+            case num % 3 == 0:
+                console.log("Disvisible by 3!");
+                break;
+            case num % 5 == 0:
+                console.log("Disvisible by 5!");
+                break;
+            default:
+                console.log("Not Disvisible by 3 or 5!");
+        }
+    </script>
+</body>
+</html>

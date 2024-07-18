@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Array - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        Why Array is used?
+        It is used because if there are 100 values we have to create 100 
+        variables, so to avoid this, with the help of Array which can be 
+        created only with one variable but can store many values....
+        */ 
+        /*
+        Array had two main Parts:-
+        1. Index
+        2. Value
+        */
+        // Way to display Array
+        students = ["Shreya", "Sony", "Gouri", "Sweety"];
+        // Printing array with the help of console.log
+        console.log(students);
+        // Printing array in Tabular Format with the help of con sole.table
+        console.table(students);
+        // Finding no of elements in the array...
+        console.log(students.length);
+        // Getting particular element with the help of index number
+        // Index number starts from 0...
+        console.log(students[2])
+        // Updating value at index no. 0 as "Padma"
+        students[0] = "Padma";
+        console.table(students);
+        // Adding an Element to the Array...
+        students[4] = "Vinod";
+        console.table(students);
+        /* 
+        But if an element is added leaving one index place...
+        Then that place is named as "empty"...
+        This "empty" word will not be displayed with the help of console.table
+        It will just show the index numeber updated... Not the "empty" word.
+        */ 
+        students[6] = "Bujji";
+        console.log(students);
+    </script>
+</body>
+</html>
+
+<!--
+19/ July/ 2024, Friday  
+Tommorow's Plan 
+1. Array
+    - push
+    - pop
+    - shift
+    - unshift
+    - slice
+    - splice
+-->

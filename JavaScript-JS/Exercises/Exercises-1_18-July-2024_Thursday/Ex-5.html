@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Question - 5</title>
+</head>
+<body>
+    <script>
+        /*
+        Exercise Question - 5:-
+        Find whether a num is divided by 3, by 5, not divisible by both 3 and
+        5 or divisible by both.
+        Explanation:-
+        Input - 1:-
+        const num = 10;
+        Output - 1:-
+        Divisible by 5!
+        --------------------------
+        Input - 2:-
+        const num = 9;
+        Output - 2:-
+        Divisible by 3!
+        --------------------------
+        Input - 3:-
+        const num = 15;
+        Output - 3:-
+        Divisible by both 3 and 5!
+        --------------------------
+        Input - 4:-
+        const num = 19;
+        Output - 4:-
+        Not Divisible by 3 and 5!
+        --------------------------
+        */ 
+        const num = 19;
+        if(num % 3 == 0 && num % 5 == 0)
+        {
+            console.log("Divisible by Both!");
+        }
+        else if(num % 3 == 0)
+        {
+            console.log("Divisible by 3!");
+        }
+        else if(num % 5 == 0)
+        {
+            console.log("Divisible by 5!");
+        }
+        else
+        {
+            console.log("Not Divisible Both 3 and 5!");
+        }
+    </script>
+</body>
+</html>

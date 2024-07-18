@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement - Conditional Statement - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        Switch Statement - Conditional Statement in JS:-
+        - As the number of conditions increases, you can use multiple else-if 
+          statements in JavaScript. but when we dealing with many conditions, the 
+          switch statement may be a more preferred option.
+        - Example:- 
+        switch (expression)
+        {
+            case value1:
+            statement1;
+            break;
+            case value2:
+            statement2;
+            break;
+            . . .
+            case valueN:
+            statementN;
+            break;
+            default:
+            statementDefault;
+        };
+        */
+        // if - else Ladder
+        percent = 60.8;
+        if(percent >= 35 && percent <= 50)
+        {
+            console.log("C");
+        }
+        else if(percent > 50 && percent <= 60)
+        {
+            console.log("B");
+        }
+        else if(percent > 60 && percent <= 75)
+        {
+            console.log("A");
+        }
+        else
+        {
+            console.log("A+");
+        }
+        // Switch Statment:-
+        /*
+        switch(percent)
+        {
+            case 35:
+                console.log("Pass")
+        }
+        */
+       switch(true)
+       {
+        case percent < 35:
+            console.warn("Fail");
+            break;
+        case percent >= 35 && percent <= 50:
+            console.log("C");
+            break;
+        case percent > 50 && percent <= 60:
+            console.log("B");
+            break;
+        case percent > 60 && percent <= 75:
+            console.log("A");
+            break;
+        case percent > 100:
+            console.warn("Invalid Percent!");
+            break;
+        defalut:
+            console.log("A++");
+        }
+        /*
+        Here in Switch if we will not use the 'break;' statement than if the 
+        first case is True all the other statement below it will be executed.
+        So to overcome this, "break;" is used.
+        I.e. to if one statement is "true" than it will not go to the next
+        statement to check, it will get break right their... 
+        */
+    </script>
+</body>
+</html>
