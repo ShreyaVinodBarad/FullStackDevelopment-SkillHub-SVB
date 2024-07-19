@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call by Value And Call by Reference</title>
+</head>
+<body>
+    <script>
+        // 1. Call by Value
+        const a = 10;
+        const y = 10;
+        console.log(a === y);
+        // true for above
+
+        // 2. Call by Reference 
+        const arr = [1, 2, 3];
+        const arr1 = [1, 2, 3];
+        console.log(arr === arr1);
+        // false for above
+        
+        /*
+        - Here whar happens is every items of array are stored at different 
+        location so has the different address, because of which they do not come
+        in category of "strict equal to", though the values of both the array
+        are same.
+        - In array values are not compared but there addresses are taken into 
+        consideration.That's way if p has address as 124, then it is assigned to 
+        q, so it's address will also be 124.
+        so as array follows the conspect of "Call by Reference" wherein if values
+        are equal in both the array's, then also they are not same because 
+        in array values are not compared but actually there address are taken 
+        into consideration.
+        */ 
+        
+        const p = [];
+        const q = p;
+        console.log(p === q)
+        // Ans:- true
+        
+        /*
+        Here given is an array whose address eg: 124, then this array's address
+        is given to i,so i and r now has same address wherein the array is stored. 
+        when we push a value then, the value added will be in the same "Address".
+        so it will give [10] in both the i  and r variable.
+        */ 
+        const r = []; 
+        // Address - 124
+        const i = r;
+        r.push(10)
+        console.log(i)
+        console.log(r)
+        /*
+        ans:- [10]
+              [10]
+        This will have same output, because they are on the same Address.
+        */
+    </script>
+</body>
+</html>

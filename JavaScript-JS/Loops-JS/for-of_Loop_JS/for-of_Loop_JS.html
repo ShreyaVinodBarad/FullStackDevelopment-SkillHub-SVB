@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for - of Loop -JS</title>
+</head>
+<body>
+    <script>
+        /*
+        for - of Loop:-
+        - To get all the values of array we use for - of Loop.
+        - Only used on array.
+        Syntax:-
+        for(let (VariableName which has Array's Value) of (ArrayName))
+        {
+            Code Comes here;
+        }
+        */
+        const arr = ["dell", "hp", "apple"];
+        for(let x of arr)
+        {
+            console.warn(x);
+        }
+        // Example - 1:
+        const nums = [1, 54, 6, 7, 8, 2];
+        for(const item of nums)
+        {
+            if(item % 2 === 0)
+                {
+                    consoel.log(item);
+                }
+        }
+    </script>
+</body>
+</html>

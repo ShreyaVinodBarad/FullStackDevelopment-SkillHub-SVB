@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods - JS</title>
+</head>
+<body>
+    <script>
+        const users = ["john", "kate", "ross"];
+        console.log("Before: ", users);
+        // 1. push():-
+        users.push("rachel");
+        // push function add an element to an array at the end of the array.
+        console.log("After using push Function: ", users);
+        // 2. unshift():-
+        users.unshift("joe")
+        // Adds the value at the start of the Array.
+        console.log("After using unshift Function: ", users);
+        // 3. pop():-
+        users.pop();
+        // Delets the value from the end of the Array.
+        console.log("After using pop Function: ", users);
+        // 4. shift():-
+        users.shift()
+        // Delets the value at the start of the Array.
+        console.log("After using shift Function: ", users); 
+        // 5. splice():-
+        users.splice(1,1);
+        /*
+        Deletes the value.
+        - Syntax:-
+        splice(Index No., the value to be deleted, Number of values to
+        be deleted from the given index.)                     
+        )*/
+        users.splice(1,1);
+        console.log("After using splice Function: ", users);
+        /*
+        - Syntax:-
+        splice(Index No., the value to be deleted, Number of values to
+        be deleted from the given index, value to be updated);
+        */
+        user.splice(1, 2, "ray") 
+        console.log("After using splice Function it adds new value 'ray': ", users);
+        // 6. slice:-
+        // Syntax:-
+        // slice(start index, end index);
+        users.slice(1,3);
+        console.log("After using slice Function: ", users);
+
+    </script>
+</body>
+</html>

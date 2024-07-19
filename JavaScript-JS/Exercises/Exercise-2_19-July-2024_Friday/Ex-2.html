@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 2 (for - of Loop)</title>
+</head>
+<body>
+    <script>
+        // Largest value in the "arr"
+        /*
+        const arr = [600, 5, 3, 44, 8];
+        let large = arr[0];
+        for(const item of arr)
+        {
+            if(item > large)
+            {
+                large = item;
+            }
+        }
+        console.log("Largest Value = ", large);
+        */
+        // ------------------------------------------------------------------
+        //  small value in the "arr"
+        /*
+        const arr = [600, 5, 3, 44, 8];
+        let small = arr[0];
+        for(const item of arr)
+        {
+            if(item < small)
+            {
+                small = item;
+            }
+        }
+        console.log("Smallest Value = ",small);
+        */
+        // ------------------------------------------------------------------
+        // Largest and Smallest value in the "arr"
+        const arr = [600, 5, 3, 44, 8];
+        let small = arr[0];
+        let large = arr[0];
+        for(const item of arr)
+        {
+            if(item < small)
+            {
+                small = item;
+            }
+            else if(item > large)
+            {
+                large = item;
+            }
+        }
+        console.log("Smallest Value = ",small);
+        console.log("Largest Value = ",large);
+    </script>
+</body>
+</html>

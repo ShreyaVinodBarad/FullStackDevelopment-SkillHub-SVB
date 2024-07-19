@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Question - 4</title>
+</head>
+<body>
+    <script>
+        /*
+        Find percentage of the addition of the values done in the arr.
+        */
+        const arr = [10, 20, 30 ,40];
+        let add = 0;
+        for(item of arr)
+        {
+            add += item;
+        }
+        console.log(add / (100 * arr.length) * 100); 
+        /* 
+        This code is Dynamic because if the length of the array is changed 
+        then also it automatically changes it's length and gives the output.
+        */
+    </script>
+</body>
+</html>

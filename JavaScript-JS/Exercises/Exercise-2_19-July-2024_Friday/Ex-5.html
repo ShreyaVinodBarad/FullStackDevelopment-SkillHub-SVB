@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Question - 5</title>
+</head>
+<body>
+    <script>
+        // Reversing the Array
+        // Method - 1
+        /*
+        const arr = ["Dell", "HP", "Apple"];
+        let rev = [];
+        for(const item of arr)
+        // Here const can be 
+        {
+            rev.unshift(item);
+        }
+        console.log("Original Array = ",arr);
+        console.log("Reversed Array = ",rev);
+        */
+        // Method - 2
+        const arr = ["Dell", "HP", "Apple"];
+        let rev = [];
+        for(const item of arr)
+        /* 
+        Here const can be used because though "item" value is updated
+        but every time new "item" variable is created.
+        */
+        {
+            rev.splice(0, 0, item);
+        }
+        console.log("Original Array = ",arr);
+        console.log("Reversed Array = ",rev);
+    </script>
+</body>
+</html>
