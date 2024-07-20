@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - JS</title>
+</head>
+<body>
+    <script>
+        /* 
+        Variables are declared with "var" keyboard.
+        Ways to Declare Variables...
+        1) Method - 1
+        */ 
+        var name;
+        var age;
+        // 2) Method - 2
+        var name, age;
+        // --------------------------------------------------------------------
+        /*
+        Storing value in a Variable is called Variable Initialization...
+        1) Method - 1
+        Assigning a value after declaration of the variable.
+        */
+        name = "Shreya Vinod Barad"
+        console.log(name)
+        /*
+        2) Method - 2
+        Here we are initializing the value for a variable while it's creation
+        */
+        var qualification = "Pursuing Post - Graduation"
+        console.log(qualification)
+        // --------------------------------------------------------------------
+        /*
+        Scope of a Variable:-
+        - Within the body of a function, a local variable takes precedence over a 
+          global variable with the same name. If you declare a local variable or 
+          function parameter with the same name as a global variable, you 
+          effectively hide the global variable. 
+        */ 
+        var myVar = "Global"
+        function checkingScope()
+        {
+            var myVar = "Local"
+            console.log(myVar)
+        }
+        // --------------------------------------------------------------------
+        /*
+        JavaScript Variable Names:-
+        Below are the following rules to which must be followed while writing 
+        variable names:-
+        - You should not use any of the JavaScript reserved keywords as a 
+          variable name.
+          For example, break or boolean variable names are not valid.
+        - JavaScript variable names should not start with a numeral (0-9). 
+          They must begin with a letter or an underscore character. 
+          For example, 123test is an invalid variable name but _123test is a 
+          valid one.
+        - JavaScript variable names are case-sensitive. 
+          For example, Name and name are two different variables.
+        */
+        // --------------------------------------------------------------------
+    </script>
+</body>
+</html>
