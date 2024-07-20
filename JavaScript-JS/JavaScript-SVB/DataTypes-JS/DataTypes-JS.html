@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        There are two types of Data Types:-
+        1) Primitive Data Type
+        - String
+        - Number
+        - Boolean
+        - Undefined
+        - Null
+        2) Non - Primitive Data Type 
+        - Object 
+        - Array
+        - RegExp
+        */
+        /*
+        1) Primitive Data Type
+        */  
+        console.log("Primitive Data Type");
+        // a. String:-
+        console.log("String Data Type");
+        const a = "10"
+        console.log(typeof(a))
+        // b. Number:-
+        console.log("Number Data Type");
+        const b = 20
+        console.log(typeof(b))
+        // c. Boolean:-
+        console.log("Boolean Data Type");
+        const c = true
+        console.log(typeof(c))
+        // d. Undefined:-
+        console.log("Undefined Data Type");
+        const d = undefined
+        let e
+        console.log(typeof(d))
+        // e. Null
+        console.log("Null Data Type");
+        const f = null
+        console.log(typeof(f))
+        /*
+        2) Non - Primitive Data Type
+        */
+        console.log("Non - Primitive Data Type");
+        // 1. Object:-
+        console.log("Object Data Type");
+        let Student = {firstName : "Shreya", lastName : "Barad", class: 10}
+        console.log(typeof(Student))
+        // 2. Array:- 
+        console.log("Array Data Type")
+        const arr = ["Sony", "Gouri", "Vinod", "Padma"]
+        console.log(typeof(arr))
+        // 3. RegExp"":-
+        console.log("Regular Expression Data Type")
+        let str = "Visit geeksforGeeks"
+        regExp = /GeeksforGeeks/i
+        let n = str.search(regExp)
+        console.log(n)
+        console.log(typeof(n))
+        console.log(typeof(regExp))
+
+        /*
+        NOTE:-
+        1) BigInt
+        2) Symbol
+        */
+        // 1) BigInt:-
+        console.log("BigInt")
+        let val = 123456789n
+        // BigInt is created by appending "n" to the end of the Integer.
+        console.log(typeof(val))
+        // 2) Symbol:-
+        console.log("Symbol")
+        let val1 = Symbol("Sony")
+        let val2 = Symbol("Sony")
+        console.log(typeof(val1))
+        console.log(typeof(val2))
+        console.log(val1 === val2)
+
+        // When our Data Type comes as "object":-
+        console.log("When our Data Type comes as 'object'?")
+        // 1. When the variable contains the value 'null'
+        console.log("When the variable contains the value 'null':-")
+        let dummy = null
+        console.log(typeof(dummy))
+        // 2. When array is initilized.
+        console.log("When array is initilized:-")
+        let arr1 = []
+        console.log(typeof(arr1))
+        // 3. When only curly braces are used:-
+        console.log("When only curly braces are used:-")
+        let obj = {}
+        console.log(typeof(obj))
+        </script>
+</body>
+</html>
