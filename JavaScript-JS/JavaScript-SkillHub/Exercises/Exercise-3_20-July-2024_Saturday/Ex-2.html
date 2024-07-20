@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Question - 2(Array - Of - Object, Problems)</title>
+</head>
+<body>
+    <script>
+        /*
+        Question Given By Sir....
+        */ 
+        const brands = 
+        [
+            {
+                name: "apple",
+                country: "usa",
+                products: ["laptop", "mobile"],
+                sell: 
+                [
+                    {
+                        country: "india",
+                        hq: "delhi",
+                        city: ["pune", "mumbai"]
+                    },
+                    {
+                        country: "usa",
+                        hq: "new york",
+                        city: ["la", "boston"]
+                    }
+                ]
+            },
+            {
+                name: "samsung",
+                country: "s koria",
+                products: ["home appl.", "mobile"],
+                sell: 
+                [
+                    { 
+                        country: "india", 
+                        hq: "mumbai", 
+                        city: ["jalna", "delhi"] 
+                    },
+                    { 
+                        country: "s koria", 
+                        hq: "seoul", 
+                        city: ["seoul"] 
+                    },
+                ]
+
+            },
+        ]
+
+        // 1. Printing - "pune"
+        console.log(brands[0].sell[0].city[0])
+        // 2. Prinitng - "seoul"
+        console.log(brands[1].sell[1].city[0])
+        // 3. Prinitng - ["jalna", "delhi"]
+        console.log(brands[1].sell[0].city)
+        // 4. Printing apple's HeadQuater's in USA.
+        console.log(brands[0].sell[1].hq)
+    </script>
+</body>
+</html>

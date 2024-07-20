@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Question -1</title>
+</head>
+<body>
+    <script>
+        /*
+        Swapping of Variable's Value:-
+        consider 2 Variables with name x and y;
+        Then there values are assigned as :
+        let x = 10;
+        let y = 20;
+        Now our task is to Swap the Values...
+        Then get the Ans:-
+        x = 20;
+        y = 10;
+        */ 
+        let x = 10;
+        let y = 20;
+        let dummy;
+        console.log(x, y)
+        // 1. Method - 1
+        dummy = x;
+        x = y;
+        y = dummy;
+        console.log(x, y)
+        // 2. Method - 2
+        // Method - 2 is only applicable on Numbers!
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        console.log(x, y)
+        // Method - 3
+        // Using Array
+        const arr = [x, y]
+        x = arr[1]
+        y = arr[0]
+        console.log(x, y)
+    </script>
+</body>
+</html>

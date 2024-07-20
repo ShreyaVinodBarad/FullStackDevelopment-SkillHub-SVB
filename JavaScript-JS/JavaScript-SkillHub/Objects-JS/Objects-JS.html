@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects - JS</title>
+</head>
+<body>
+    <script>
+    /*
+    Difference between Array and Object:-
+    - Array can only store One Type of Value.
+    - Object can only store Different Type of Value.
+    */
+    const obj = {name : "John", age : 21}
+    console.log(obj.name, obj.age)
+    /*
+    ==> Array - Of - Objects:-
+    If we want to store multiple types of data than we use Array - Object Model. 
+    */
+    // Example:-
+    const Student = 
+        [
+        {Name: "Shreya", Age: 21},
+        {Name: "Sony", Age: 22},
+        ]
+        console.log(Student.length)
+        console.log(Student[0].Name)
+        console.log(Student[1].Age)
+    /*
+    Object cannont have same named multiple keys, if there are same name keys it overrides it and 
+    gives the only one value to the key.
+    Example:-
+    */
+    const obj1 = {name: "Shreya", name: "Sony"}
+    /*
+    Here are two keys with same name i.e. "name" so it overrides the key and gives the last
+    value assigned to that particular key.
+    Example:-
+    */
+    console.log(obj1)
+    // The above ststement gives output as "name: 'Sony'".
+    obj.name = "kate"
+    // Assigned another value to the same key so it's output is now "name: ''kate".
+    obj.age = 22
+    // Now assigned another Key named "age" so now the Output is:-
+    console.log(obj)
+    // {name : "kate", age =22}
+    </script>
+</body>
+</html>

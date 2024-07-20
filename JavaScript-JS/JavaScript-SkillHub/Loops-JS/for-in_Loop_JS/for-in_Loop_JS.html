@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for - in  Loop in JavaScript</title>
+</head>
+<body>
+    <script>
+        /*
+        As we are using "for - of" loop for Array...
+        So, now using "for - in" loop for Objects...
+        */ 
+        const test = {name: "Sony", age: 22}
+        for (const item in test) 
+        {
+            console.log(item)    
+        }
+        /* 
+        If we are assigning a variable named x = "city", then when giving test.x = "Pune"
+        then it will not add value of x i.e. "city" as the next key but it will add "x" as the 
+        key.
+        So, to get the "city" as key for variable x we have to use "Dynamic Key Method".
+        That is, keeping the variable which contains the name for the key you want to add, into 
+        square brackets i.e.: test[x]  = "Pune".
+        Then here we will get "city: 'Pune'" in the test - Object.
+        Example:-
+        */
+        x = "city"
+        test.x = "Pune"
+        console.log(test)
+        /*
+        For the above code it will not add "city" as the key but will add "x" as the key and 
+        will print the value as "x = 'Pune'".
+        */ 
+        /*
+        If you want to get "city" as your key which you have stored in variable "x", we have to 
+        use "Dynamic Key Method".
+        Wherein we assign the vaiable which contains the key name, in "Square Brackets - []" and then 
+        will give that expression a value which will be the value for the Key.
+        Example:-
+        */ 
+        test[x] = "Pune"
+        console.log(test)
+    </script>
+</body>
+</html>
