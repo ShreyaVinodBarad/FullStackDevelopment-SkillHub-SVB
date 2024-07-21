@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        What are Operators?
+        - Let's take an Example i.e. 2 + 5.
+          Here, 
+            Example:-
+                2 and 5 == Operands
+                +       == Operator
+            Here consider, 
+                a = 10
+                b = 20
+        --------------------------------------------------------------------------------------
+        - Types of Operators:-
+        1) Arithematic Operators:-
+        JavaScript supports the following Arithmetic operators:
+        - Addition ( + )
+        - Subtraction ( - )
+        - Multiplication ( * )
+        - Division - ( / )
+        - Modulus - (/)
+        1) Addition(+)
+        - Adds two operands
+        - Ex: 
+            A + B will give 30
+        2) Subtraction(-)
+        - Subtracts the second operand from the first
+        - Ex: 
+            A - B will give -10
+        3) Multiplication(*)
+        - Multiply both operands
+        - Ex: 
+            A * B will give 200
+        4) Division(/)
+        - Divide the numerator by the denominator
+        - Ex: 
+            B / A will give 2
+        5) Modulus(%)
+        - Outputs the remainder of an integer division
+        - Ex: 
+            B % A will give 0
+        */
+        console.log("Arithematic Operator: ")
+        a = 10
+        b = 20
+        console.log("Addition a + b: ", a + b)
+        console.log("Subtraction a - b: ", a - b)
+        console.log("Multiplication a * b: ", a * b)
+        console.log("Division a / b: ", a / b)
+        console.log("Modulus a % b: ", a % b)
+        // --------------------------------------------------------------------------------------
+        
+        /*
+        2) Increment and Decrement Operators:
+        JavaScript has an increment and a decrement operator. 
+        They modify a variable in place./ ++ adds one to a number, 
+        -- subtracts one from a number.
+        1) Increment (++):-
+            - Postfix - Increment( a++ )
+            - Prefix - Increment( ++a )
+        2) Decrement (--):  
+            - Postfix - Decrement( a++ )
+            - Prefix - Decrement( ++a )
+        :- Using ++/-- After the Operand
+           - When you use the increment/decrement operator after the operand, 
+           - the value will be returned before the operand is increased/
+           decreased.
+        :- Using ++/-- Before the Operand
+            - If you’d rather make the variable increment/decrement before 
+            returning, you simply have to use the increment/decrement operator 
+            before the operand.
+        */ 
+        // :- Using ++/-- After the Operand
+        let s = 10
+        console.log(s++)
+        console.log(s)
+        let x = 10
+        console.log(x--)
+        console.log(x)        
+        // :- Using ++/ -- Before the Operand
+        let p = 10
+        console.log(++p)
+        console.log(++p)
+        let r = 10
+        console.log(++r)
+        console.log(++r)
+        // --------------------------------------------------------------------------------------
+        
+        /*  
+        4) Comparsion Operator:
+        - JavaScript comparison operators are essential tools for 
+        checking conditions and making decisions in your code. 
+        - They are used to evaluate whether a condition is true or 
+        false by comparing variables or values. 
+        - These operators 
+        play a crucial role in logical expressions, helping to 
+        determine the equality or differences between values.
+        - Types of  Comparsion Operators are:-
+        -----------------------------------------------------------------------
+        | Operator Name      |       Usage       |     Operation              |
+        ----------------------------------------------------------------------|
+        | Equality Operaters |   a == b          |  Compare the Equality of   |
+        |                    |                   |  2 Operators.              |
+        ----------------------------------------------------------------------|
+        |  Inequality        |   a != b          |  Compares Inequality of    |
+        |  Operator          |                   |   two Operators            |
+        ----------------------------------------------------------------------|
+        |  Strict Equality   |   a === b         |  Compares both the value   | 
+        |  Operator          |                   |  and Data type of          |  
+        |                    |                   |  the operand               |
+        ----------------------------------------------------------------------|
+        |  Stricy Inequality |   a !== b         | Compares inequality        |
+        |  Operatotr         |                   | with type                  | 
+        |                    |                   |                            |                
+        ----------------------------------------------------------------------|
+        |  Greator Than      |     a > b         | Checks if the left         | 
+        |  Operator          |                   | operator is greater than   |  
+        |                    |                   | the right operator         |
+        ----------------------------------------------------------------------|
+        |  Less Than         |     a < b         | Checks if the left         | 
+        |  Operator          |                   | operator is smaller than   |  
+        |                    |                   | the right operator         |
+        |---------------------------------------------------------------------|    
+        |   Greater than     |    a >= b         |  Checks if the left        |
+        |   Or Equal to      |                   |  operator is greater than  | 
+        |   Operator         |                   |  or equal to the right     |
+        |                    |                   |  operator                  |
+        |---------------------------------------------------------------------|                                         
+        |   Less than        |    a <= b         |  Checks if the left        |
+        |   Or Equal to      |                   |  operator is smaller than  | 
+        |   Operator         |                   |  or equal to the right     |
+        |                    |                   |  operator                  |
+        |---------------------------------------------------------------------|                                       
+        */
+        let d = 10
+        let f = 20
+        /*
+        1) Equality Operaters
+        - Compare the Equality of 2 Operators.
+        */
+       console.log("Equality Operaters")
+       console.log(d == f)
+       
+        /* 
+        2) Inequality Operators:
+        - Compares Inequality of  two Operator       
+        */ 
+        console.log("Inequality Operaters")
+        console.log(d != f)
+
+        /* 
+        3) Strict Equality Operator
+        - Compared both the value and the data type of the operand
+        */
+        console.log("Strict Equality Operators")
+        console.log(d === f) 
+        
+        /*
+        4) Strict Inequality Operator
+        - Compare Inequality with it's Type
+        */
+        console.log("Strict Inquality Operators")
+        console.log(d === f)
+
+        /*
+        5) Greater than Operator:
+        - Check if the Left Operator is greater than the Right Operator
+        */
+        console.log("Strict Inquality Operators")
+        console.log(d > f)
+       
+        /* 
+        6) Less than Operator:
+        - Check if the Left Operator is smaller than the Right Operator
+        */
+        console.log("Strict Inquality Operators")
+        console.log(d < f)
+        
+        /*
+        7) Greater than or Equal to Operator:
+        - Check if the left operator is greater than or equal to the right operator
+        */
+        console.log("Greater than or Equal to Operators")
+        console.log(d >= f)
+       
+        /*
+        8) Less Than or Equal to Operator:-
+        - Check if the left operator is smaller than or equal to the right operator
+        */ 
+        console.log("Smaller than or Equal to Operators")
+        console.log(d >= f)
+        // --------------------------------------------------------------------------------------
+        
+        /*
+        8) Logical Operators:-
+        -  
+        */ 
+    </script>
+</body>
+</html>
