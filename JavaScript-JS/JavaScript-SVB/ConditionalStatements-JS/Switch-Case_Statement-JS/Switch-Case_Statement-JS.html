@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch - Case Statement - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        4. Switch - Case Statement:-
+        - Syntax:
+        1. The objective of a switch statement is to give an expression to evaluate and 
+        several different statements to execute based on the value of the expression. 
+        2. The interpreter checks each case against the value of the expression until a 
+        match is found. If nothing matches, a default condition will be used.
+        ------------------------------------------------------------------------------
+        |   switch (expression)                                                       |
+        |   {                                                                         |
+        |       case condition 1: statement(s)                                        |
+        |       break;                                                                |
+        |       case condition 2: statement(s)                                        |
+        |       break;                                                                |
+        |       ...                                                                   |
+        |       case condition n: statement(s)                                        |
+        |       break;                                                                |
+        |       default: statement(s)                                                 |
+        |   }                                                                         |
+        ------------------------------------------------------------------------------
+        - The break statements indicate the end of a particular case. If they were 
+        omitted, the interpreter would continue executing each statement in each of the 
+        following cases.
+        */ 
+        // Example - 1:-
+        var Grade = "B"
+        switch (Grade) 
+        {
+            case "A":
+                console.log("Your Grade is - A")
+                break;
+            
+            case "B":
+                console.log("Your Grade is - B")
+                break;
+            
+            case "C":
+                console.log("Your Grade is - C")
+                break;
+            
+            case "D":
+                console.log("Your Grade is - D")
+                break;
+            
+            default:
+                console.log("Invalid Grade!")
+        }
+        // Break statements play a major role in switch-case statements.
+    </script>
+</body>
+</html>
