@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - 1</title>
+</head>
+<body>
+    <script>
+        function Dummy(p1, p2)
+        {
+            p2 = p1 + p2(10)
+            /*
+            The above statement says that "p2" has Demo as a "Function" in it...
+            So, here "p2(10)" means that it is calling "Demo" function with the arg - 10
+            */ 
+            return p1 + p2
+            // Here, it will be 10 + 20 = 30
+        }
+        function Demo(arg)
+        {
+            arg = arg * arg
+            return 10
+        }
+        const result =Dummy(Demo(10), Demo)
+        /*
+        When only "Demo" is there it means it's function is there as the value of "Demo"
+        rather then it's value
+        */ 
+        console.log(result)
+    </script>
+</body>
+</html>

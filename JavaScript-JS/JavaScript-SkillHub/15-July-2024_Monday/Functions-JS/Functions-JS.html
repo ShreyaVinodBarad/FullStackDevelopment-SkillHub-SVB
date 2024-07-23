@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions - JS</title>
+</head>
+<body>
+    <script>
+        /*
+        1) Functions:-
+        - Functions are used to minimize the repetative writing of a code.
+        */
+        /*
+        ----------------------------------------------------------------------------
+        function                             =>                     Keyword
+        Hello                                =>                     Function Name
+        ()                                   =>                     Parenthesis
+        {}                                   =>                     Curly Bracket
+        console.log("Hello World!")          =>                     Function Body
+        Hello()                              =>                     Function Call
+        ----------------------------------------------------------------------------
+        */ 
+        function Hello()
+        {
+            console.log("Hello World!")
+        }
+        Hello()         
+        // The above statemennt is used to get the output i.e. "Hello World!".
+        // But if:-
+        const x  = Hello
+        console.log(x)
+        /*
+        Here, the output will be the whole function as here the address is taken into
+        consideration...
+        i.e.,
+        if test = 123 ==> Address
+        than x = test ==> 123   ==> Address
+        Here, both test and x will have same address....
+        */
+        // Passing values to Functions through one Arguments...
+        function demo(a)
+        {
+            consoel.log(a)
+        } 
+        demo(19)
+        // Passing values to Functions through 2 Arguments...
+        function demo(a1, a2)
+        {
+            console.log(a1 + a2)
+        } 
+        demo(19, 20)
+        // Using "return":-
+        // Type - 1
+        function square(p1)
+        {
+            const result = (p1 * p1)
+            return result;
+        }
+        const Res = square(3)
+        console.log(Res)
+        // Type - 2
+        function Meth2(p1)
+        {
+            return p1 * p1;
+        }
+        const Res1 = Meth2(3)
+        console.log(Res1)
+
+        // Ex - 1
+        function test1()
+        {
+            return "SVB"
+        }
+        const Res2 = test1
+        console.log(Res2)
+        // As per the above example it will return the entire function i.e. 
+        /*
+        function test1()
+        {
+            return "SVB"
+        }
+        */
+
+        // Ex - 2
+        function test2()
+        {
+            return "SVB"
+        }
+        const Res3 = test2()
+        console.log(Res3) 
+        // As per the above example it will return the function's value i.e. SVB
+   </script> 
+</body>
+</html>

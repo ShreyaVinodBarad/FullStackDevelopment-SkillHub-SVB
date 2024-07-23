@@ -17,6 +17,60 @@
         Scope                   Functional       Block            Block
         Mandatory Initilize     No               No               Yes
         */
+        /*
+        Scope:-
+        - Condition - 1
+        -Below code is valid for "var" i.e. value of x is being printed inside the 
+        function only i.e. It is a Functional Scope.
+        */
+        function test()
+        {
+            if(true)
+            {
+                var x = 10
+                let y = 20
+                const z = 30
+            }
+            console.log(x)
+        } 
+        /*
+        - Condition - 2
+        - Below code is not vaild because "let" and "const" are being accessed out of 
+        block i.e. if Block  
+        */ 
+        function test1()
+        {
+            if(true)
+            {
+                var x = 10
+                let y = 20
+                const z = 30
+            }
+            console.log(y)
+            console.log(z)
+        } 
+        /*
+        - Condition -3
+        - You cannot access "var", "let" and "const" out of Functional or Block
+        i.e.:-
+        */ 
+        function test1()
+        {
+            if(true)
+            {
+                var x = 10
+                let y = 20
+                const z = 30
+            }
+        } 
+        console.log(x)
+        console.log(y)
+        console.log(z)
+        /*
+        What is Closure?
+        The method of using outer scope variables inside the inner scope and not using 
+        inner scope variables outside the inner scope is known as Closure.
+        */ 
     </script>
 </body>
 </html>

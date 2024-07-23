@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - 2 => Events In JavaScript</title>
+</head>
+<body>
+    <input type="text" id="Num1">
+    <input type="text" id="Num2">
+    <button onclick="Call()">
+        Click Me
+    </button>
+    <script>
+        function Call()
+        {
+            /*
+            Here below it can be seen that the "typeof" Operator gives output as String.
+            Because every time we take some data from HTML to JS it comes in the String 
+            Format.
+            So, here the the output for the "typeof(x)" and "typeof(y)" will be "string".
+            So, if number are added then it will "concatenate" it but will not add...
+            Eg:-
+            2 
+            2
+            On clicking on button in the console you will get output as:-
+            22
+            */ 
+            let x = Num1.value
+            let y = Num2.value
+            console.log(typeof(x))
+            console.log(typeof(y))
+            console.log(x + y)
+            /*
+            So to make it in the "number" format so that addition can be performed then
+            we have to add "+" symbol at the starting of the name of the "id".
+            Here is the code for that, 
+            */ 
+            let a = +Num1.value
+            let b = +Num2.value
+            console.log(typeof(a))
+            console.log(typeof(b))
+            console.log(a + b)
+        }
+    </script>
+</body>
+</html>
