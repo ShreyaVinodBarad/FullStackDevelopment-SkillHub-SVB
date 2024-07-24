@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Label to Control the Flow</title>
+</head>
+<body>
+    <script>
+        /*
+        - Labels are used to associate them with expressions.
+        - Use the Label to refer to the expression.
+        -The Label Statement is used with the break and continue statements and serves 
+        to identify the statement to which the break and continue statements apply.
+        - Usage
+        Without the use of a labeled statement the break statement can only break out of 
+        a loop or a switch statement. Using a labeled statement allows break to jump out 
+        of any code block.
+        - When used with a continue statement the labeled statement allows you to skip a 
+        loop iteration, the advantage comes from being able to jump out from an inner 
+        loop to an outer one when you have nested loop statements. Without the use of a 
+        labeled statement you could only jump out of the existing loop iteration to the 
+        next iteration of the same loop.
+        - Syntax:-
+        -----------------
+        | label name:   |   
+        | expression    |
+        -----------------
+        - Jacascript labels can only be used with break and continue statements within 
+        loops or functions.
+        - Example:-
+        */ 
+        let data = 
+        [
+            {
+                firstName: "John",
+                lastName: "Wick",
+                dogsName : "Buddy",
+                inventory: 
+                [
+                    "Expensive Suit",
+                    "Pistol",
+                    "Muscle Car",
+                    "Luxuary House"
+                ]
+            },
+            {
+                firstName: "Mr",
+                lastName: "Nobody",
+                dogsName : "Harry Potter",
+                inventory: 
+                [
+                    "Rugged Jeans",
+                    "Pistol",
+                    "Shit Car",
+                    "Norma House"
+                ]
+            },
+            {
+                firstName: "Mr",
+                lastName: "Equalizer",
+                dogsName : "",
+                inventory: 
+                [
+                    "Expensive Suit",
+                    "Pistol",
+                    "Normal Car",
+                    "Rental House"
+                ]
+            }
+        ];
+        outerLoop:
+        for(var i = 0; i < data.length ; i++)
+        {
+            innerLoop:
+            for(var j = 0; j < data[i].inventory.length; j++)
+            {
+                if(data[i].inventory[j] === "Rugged Jeans")
+                {
+                    break outerLoop;
+                }
+                else
+                {
+                    console.log(data[i].inventory[j])
+                }
+            }
+        }
+        /*
+        IMPOTANT NOTE:-
+        Do not use this Method...
+        Because this code is lengthy and confusing...
+        */ 
+    </script>
+</body>
+</html>

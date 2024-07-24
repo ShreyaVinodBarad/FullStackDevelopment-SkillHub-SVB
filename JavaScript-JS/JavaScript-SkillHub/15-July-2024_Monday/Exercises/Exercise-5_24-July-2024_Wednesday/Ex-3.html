@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 3</title>
+</head>
+<body>
+    <script>
+        function test()
+        {
+            return 5 * 10
+        }
+        function test1(arg)
+        {
+            return 5 * 10
+        }
+        let result = test
+        console.log(result)
+        // Function "test()" come as it is in the console .
+        let result1 = test()
+        console.log(result1)
+        // Function "test()"'s value come as it is in the console .
+        let result2 = test(25)
+        // It gives return's value as the output...
+        console.log(result2)
+        // It's output is 50. 
+        let result3 = test1(25)
+        console.log(result3)        
+        // It's output is 50.
+        console.log(test1(test))
+        /*
+        Here, "test" goes completely as a function as the argument for "test1"...
+        */  
+    </script>
+</body>
+</html>

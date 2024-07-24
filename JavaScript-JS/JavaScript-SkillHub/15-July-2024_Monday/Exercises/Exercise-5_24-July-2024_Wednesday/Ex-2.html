@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 2</title>
+</head>
+<body>
+    <script>
+        const students = 
+        [
+            {
+                name : "Ross", 
+                age : 20,
+                batch : "BCA",
+                subject : ["S1", "S2", "S3"],
+                address  : 
+                {
+                    permenant : "Kranti Chowk",
+                    temporary : "Cidco"
+                }
+            },
+            {
+                name : "Kate",
+                age : 22,
+                batch : "BTech",
+                subject : ["B1", "B2"],
+                address  : 
+                {
+                    permenant : "P2",
+                    temporary : "T2"
+                }
+            }
+        ]
+        console.log(`${students[0].name} lives in ${students[0].address.permenant}.`)
+        console.log(`${students[1].name} is ${students[1].age} year old and studies ${students[1].batch}.`)
+        console.log(students[1].subject[1])
+        console.log(students[0].address.temporary)
+    </script>
+</body>
+</html>
