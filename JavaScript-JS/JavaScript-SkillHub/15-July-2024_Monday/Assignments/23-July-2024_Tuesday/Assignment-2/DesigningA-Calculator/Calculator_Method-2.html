@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 2 => Calculator - 2</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Number - 1" id="Num1">
+    <input type="text" placeholder="Enter Number - 2" id="Num2">
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <button onclick="Addition()">
+        +
+    </button>
+    <button onclick="Subtraction()">
+        -
+    </button>
+    <button onclick="Multiplication()">
+        *
+    </button>
+    <button onclick="Division()">
+        /
+    </button>
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <script> 
+        function getValues()
+        {
+            const Number1 = +Num1.value
+            const Number2 = +Num2.value
+            return {n1:Number1, n2:Number2} 
+        }
+        function Addition()
+        {
+            const result = getValues()
+            console.log(result.n1 + result.n2)
+        }
+        function Subtraction()
+        {
+            const result = getValues()
+            console.log(result.n1 - result.n2)
+        }
+        function Multiplication()
+        {
+            const result = getValues()
+            console.log(result.n1 * result.n2)
+        }
+        function Division()
+        {
+            const result = getValues()
+            console.log(result.n1 / result.n2)
+        }
+    </script>
+</body>
+</html>

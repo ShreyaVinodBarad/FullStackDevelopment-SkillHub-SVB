@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Functions - JS</title>
+</head>
+<body>
+    <!-- 
+    # Nested Functions:-
+    - Functions within another function are called “Nested function.” A function can have 
+    one or more inner functions. These nested functions (inner functions) are under the 
+    outer functions’ scope. In Javascript Nested Functions, the outer function can be 
+    called the Parent function, and the inner function can be called the Child function. 
+    The child function can access the variables and parameters of the Parent function.
+    -->
+    <!--  
+    - JavaScript is interpreted, which means executing code line by line. Internally 
+    JavaScript has an execution stack. All the tasks are put on the stack to execute. 
+    JavaScript works-based LIFO LIFO stands for Last In First Out, just like a Stack.
+    -->
+    <!--  
+    - Syntax:
+    function parentFun()//function definition
+    {
+    function childFun1()//function definition
+    {
+    function childFun2()//function definition
+    {
+    //code
+    }
+    childFun2(); //function calling
+    }
+    childFun1();//function calling
+    }
+    parentFun();//function calling
+    -->
+    <!--  
+    - Explanation:
+    Outer function parentFun() definition with 2 inner functions childFun1() and 
+    childFun1() definitions. Once we define the inner functions immediately below it, 
+    we have called the function because the inner functions childFun1 () and childFun1 () 
+    have to execute their code or logic.
+    At last, we called parentFun() to execute all the functions within it.
+    -->
+    <!--  
+    - Purpose of Nested functions:-
+    Whenever we don’t want to access all functions outside of the outer function, 
+    we will go for Nested functions.
+    -->
+    <!--  
+    Examples:-
+    -->
+    <!-- -------------------------------------------------------------------------- -->
+    <!--  
+    Ex-1)Outer function() with single inner function()
+    - Syntax:
+    function parent()
+    {
+    //code
+    function child()
+    {
+    //code
+    }
+    Child();
+    }
+    Parent(); 
+    - Code:-
+    -->
+    <script>
+        // Example - 1
+        function triangeHypotenuse(Base, Height)
+        {
+            function Square(Side)
+            {
+                return Side * Side
+            }
+            return Math.sqrt(Square(Base) + Square(Height))
+        }
+        console.log(triangeHypotenuse(3, 4))
+        /*
+        Explanation:
+        triangleHypotenuse() is outer function and square() is inner function. 
+        sqrt(square(base)+square(height)) returns the square root of the base and height, 
+        which gives us 3rd side value.
+        */
+        // ------------------------------------------------------------------------------
+        /*
+        Ex - 2:-Function calling inside the Outer function
+        If we call any other function inside, the function is clearly said to be a 
+        Nested function.
+        - Syntax:-
+        function getName() //outer function
+        {
+        getAge();//inner function
+        }
+        function getAge()
+        {
+        //code
+        }
+        getName(); //function calling
+        - Explanation:
+        getName() is called a nested function because it has one more function getAge(), 
+        inside the function. When we call getName(), it will call to getAge(). So, it 
+        will execute getAge() first. We can conclude this JavaScript stores the data in 
+        a Stack (LIFO).
+        - Example:-
+        */
+       function getAge(Name, Age)
+       {
+           console.log(`My Age is ${Age}.`)
+       }
+        function getName(Name, Age)
+        {
+            console.log(`My Name is ${Name}.`)
+            getAge(Name, Age)
+        }
+        getName('Shreya', 21);
+        getName('Gouri', 20);
+        getName('Padma', 50);
+        // -----------------------------------------------------------------------------
+        /*
+        Ex-3:- Anonymous inner function() with outer function()
+        - Syntax:
+        function add(a,b)//outer function
+        {
+        return function() //inner function
+        {
+        //code
+        }
+        }
+        add(3,9);
+        - Example:-
+        - Explanation:- 
+        1) Outer Function (addSum): This function now takes two parameters, a and b.
+        2) Inner Function (innerSum): The innerSum function computes the sum of a and b.
+        3) Calling the Inner Function: The inner function is invoked immediately within 
+        the outer function, and its result is returned.
+        4) Execution: When addSum(5, 3) is called, it immediately calculates 5 + 3 and 
+        returns 8, which is then written to the document.
+        */ 
+        function Add(a, b)
+        {
+            function InnerAdd()
+            {
+                return a + b;
+            }
+            return InnerAdd()
+        }
+        var Result = Add(3,4)
+        console.log(Result);
+        // ----------------------------------------------------------------------------
+        /*
+        Ex - 4:- Inner and Outer function with Variable Scope
+        - Syntax:
+        var m=0; //global value
+        function parent(p,q) //p,q parent values
+        {
+        var a=10;//parent value or local value
+        function child()
+        {
+        var b=20;//local value
+        //code
+        }
+        child();
+        }
+        parent(2,4);
+        */
+        var m = 0;
+        function parent(p, q)
+        {
+            var a = 10
+            function child()
+            {
+                var b = 20
+                console.log("Parent value of p: ", p)
+                console.log("Parent value of q: ", q)
+                console.log("Parent value of a: ", a)
+                console.log("Local value of b: ", b)
+                console.log("Global value of m: ", m)
+            }
+            child()
+        } 
+        parent(2,4)
+        /*
+        - Explanation:-
+        The output child() function can access all global, local, and parent values. 
+        Whereas the parent() function can be able to access its own values and global 
+        values
+        */
+        // ----------------------------------------------------------------------------
+        /*
+        Conclusion:-
+        - JavaScript (JS) has allowed nested functions without any errors. JS allows 
+        anonymous functions also inside an outer function. Child function can access 
+        all values global, local, and parent. In the case of Parents, the function 
+        allows only global, and it’s parental values.
+        */ 
+    </script>
+</body>
+</html>

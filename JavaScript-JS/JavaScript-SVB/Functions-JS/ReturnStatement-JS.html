@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Statement - JS</title>
+</head>
+<body>
+    <input type="number" placeholder="Num1" id="Num1">
+    <input type="number" placeholder="Num2" id="Num2">
+    <button onclick="Addition()">
+        Additon
+    </button>
+    <script>
+        function GettingValues()
+        {
+            const Number1 = document.getElementById("Num1")
+            const Number2 = document.getElementById("Num2")
+            const N1 = +Number1.value;
+            const N2 = +Number2.value;
+            return {a: N1, b: N2}
+        }
+        function Addition()
+        {
+            const result = GettingValues()
+            console.log(result.a + result.b)
+        }
+    </script>
+</body>
+</html>

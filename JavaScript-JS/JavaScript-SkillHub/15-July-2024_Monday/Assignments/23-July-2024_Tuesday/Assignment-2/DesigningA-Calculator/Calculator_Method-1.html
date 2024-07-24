@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 2 => Calculator - 1</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Number - 1" id="Num1">
+    <input type="text" placeholder="Enter Number - 2" id="Num2">
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <button onclick="Addition()">
+        +
+    </button>
+    <button onclick="Subtraction()">
+        -
+    </button>
+    <button onclick="Multiplication()">
+        *
+    </button>
+    <button onclick="Division()">
+        /
+    </button>
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <script> 
+        function Addition()
+        {
+            Number1 = +Num1.value
+            Number2 = +Num2.value
+            console.log(Number1 + Number2)
+        }
+        function Subtraction()
+        {
+            Number1 = +Num1.value
+            Number2 = +Num2.value
+            console.log(Number1 - Number2)
+        }
+        function Multiplication()
+        {
+            Number1 = +Num1.value
+            Number2 = +Num2.value
+            console.log(Number1 * Number2)
+        }
+        function Division()
+        {
+            Number1 = +Num1.value
+            Number2 = +Num2.value
+            console.log(Number1 / Number2)
+        }
+    </script>
+</body>
+</html>

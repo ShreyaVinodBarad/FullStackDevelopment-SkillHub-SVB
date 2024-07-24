@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - 2 => Calculator - 3</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Number - 1" id="Num1">
+    <input type="text" placeholder="Enter Number - 2" id="Num2">
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <button onclick="cal('add')">
+        +
+    </button>
+    <button onclick="cal('sub')">
+        -
+    </button>
+    <button onclick="cal('mul')">
+        *
+    </button>
+    <button onclick="cal('div')">
+        /
+    </button>
+    <!--  
+    ------------------------------------------------------------------------------------
+    -->
+    <script> 
+        function cal(arg)
+        {
+            const x = +Num1.value
+            const y = +Num2.value
+            switch(arg)
+            {
+                case "add":
+                    console.log(x + y);
+                    break;
+                case "sub":
+                    console.log(x - y);
+                    break;
+                case "mul":
+                    console.log(x * y);
+                    break;
+                case "div":
+                    console.log(x / y);
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
