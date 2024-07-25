@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - BootStrap => JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Calculator
+            </div>
+            <div class="card-body">
+                <div id="Result">
+                </div>
+                <input id="num1" type="number" class="form-control my-2" placeholder="Enter Num1">
+                <input id="num2" type="number" class="form-control my-2" placeholder="Enter Num2">
+                <div class="btn-group w-100">
+                    <button type="button" class="btn btn-primary" onclick="Cal('Addition')">
+                        +
+                    </button>
+                    <button type="button" class="btn btn-warning" onclick="Cal('Subtraction')">
+                        -
+                    </button>
+                    <button type="button" class="btn btn-dark" onclick="Cal('Multiplication')">
+                        *
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="Cal('Division')">
+                        /
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script>
+        function Cal(operator)
+        {
+            const n1 = +document.getElementById("num1").value
+            const n2 = +document.getElementById("num2").value
+            const Result = document.getElementById("Result")
+            switch(operator)
+            {
+                case "Addition":
+                    Result.innerHTML = 
+                    `<div class = "alert alert-primary">
+                        ${n1 + n2}
+                    </div>`
+                    break;
+                case "Subtraction":
+                    Result.innerHTML = 
+                    `<div class = "alert alert-warning">
+                        ${n1 - n2}
+                    </div>`
+                    break;
+                case "Multiplication":
+                    Result.innerHTML = 
+                    `<div class = "alert alert-dark">
+                        ${n1 * n2}
+                    </div>`
+                    break;
+                case "Division":
+                    Result.innerHTML = 
+                    `<div class = "alert alert-danger">
+                        ${n1 / n2}
+                    </div>`
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
