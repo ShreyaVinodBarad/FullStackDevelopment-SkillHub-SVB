@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>To Do List - JavaScript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        To - Do App
+                    </div>
+                    <div class="card-body">
+                        <input type="text" placeholder="Enter Task..." id="Task" class="form-control">
+                        <input type="date" id="DueDate" class="form-control">
+                        <button onclick="ToDoList_Add()" class="btn btn-primary my-2 w-100">
+                            Add
+                        </button>
+                    </div>
+                </div>
+                <div id="Result" class="mt-2">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const Task = document.getElementById("Task")
+        const Result = document.getElementById("Result")
+        const DueDate = document.getElementById("DueDate")
+        const TaskAdded = []
+        function ToDoList_Add() {
+            if(Task.value === "" && DueDate.value === "")
+            {
+                alert("Enter the Task and the Task's Due Date in the respective fields.");
+                return;
+            }
+            TaskAdded.push({ task: Task.value, dueDate: DueDate.value })
+            Task.value = ""
+            DueDate.value = ""
+            ToDoList_Display();
+        }
+        function ToDoList_Delete(i) {
+            TaskAdded.splice(i, 1)
+            ToDoList_Display()
+        }
+        function ToDoList_Display() {
+            Result.innerHTML = ""
+            let index = 0
+            for (const item of TaskAdded) 
+            {
+                Result.innerHTML +=
+                    `
+                    <div class="alert alert-primary d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-row w-50 p-2 pr-4 justify-content-between">
+                            <div >${item.task}</div>
+                            <div >${item.dueDate}</div>
+                        </div>
+                        <div class="d-flex w-50 p-2 align-items-end justify-content-end">
+                            <button class="btn btn-outline-success me-2">
+                                Complete
+                            </button>
+                            <button class="btn btn-outline-danger" onclick="ToDoList_Delete(${index})">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                    `
+                index++;
+            }
+        }
+    </script>
+    <!-------------------------------------------------------------------------------------------->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+</body>
+</html>
