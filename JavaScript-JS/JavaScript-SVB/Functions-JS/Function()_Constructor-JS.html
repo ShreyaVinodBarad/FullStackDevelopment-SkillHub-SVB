@@ -7,7 +7,43 @@
 </head>
 <body>
     <!--  
-    
+    The Function() constructor in JavaScript is a built-in global object that 
+    allows you to create a new function dynamically. This constructor can be 
+    used to define a function at runtime using a string of code. Although it 
+    offers flexibility, it is generally recommended to avoid using the Function() 
+    constructor unless absolutely necessary due to performance and security 
+    reasons, as it evaluates code as a string similar to eval().
+    -----------------------------------------------------------------------------
+    # Definition:-
+    The Function() constructor creates a new Function object. When invoked, it 
+    executes the code defined in its body string argument(s).
+    -----------------------------------------------------------------------------
+    # Syntax:-
+    new Function([arg1[, arg2[, ...argN]],] functionBody)
+    - arg1, arg2, ..., argN (optional): These are names for the function's 
+    arguments. You can define multiple parameters as needed.
+    - functionBody: A string containing the code that will be executed when the 
+    function is called. This part is mandatory.
+    -----------------------------------------------------------------------------
+    # Example Explanation:- 👇
+    Function Definition:
+    1) new Function('a', 'b', 'return a + b'):-
+    creates a new function that takes two arguments, a and b.
+    The function body is 'return a + b;', which means the function will return 
+    the sum of a and b.
+    2) Function Invocation:
+    add(5, 10); calls the newly created function with arguments 5 and 10, and 
+    it returns 15 
+    -----------------------------------------------------------------------------
+    # Example:-
     -->
+    <button onclick="Add()">Click Me</button>
+    <script>
+        function Add()
+        {
+            const Add = new Function('a' , 'b',  'return a + b')
+            console.log(Add(2, 4))
+        }
+    </script>
 </body>
 </html>

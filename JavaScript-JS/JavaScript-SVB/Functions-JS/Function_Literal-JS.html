@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Literal - JS</title>
+</head>
+<body>
+    <!--  
+    - In JavaScript, a function literal is a way to define a function using the 
+    function keyword, a name (optional), and a block of code. It's essentially 
+    a way to create a function without assigning it to a variable or giving it 
+    a name right away. Here's a simple breakdown:
+    # Basic Syntax:-
+    A function literal consists of:
+    1) Keyword: function
+    2) Name: An optional name for the function.
+    3) Parameters: A list of parameters enclosed in parentheses ().
+    4) Body: The block of code enclosed in curly braces {} that defines what 
+    the function does.
+    ----------------------------------------------------------------------------
+    # Example:-
+    - Here's an example of a function literal:
+    - However, the below function is unnamed and not assigned, so it's not yet 
+    usable directly in code. 
+                    To use it, you typically assign it to a variable:
+    -->
+    <button type="button" onclick="Result()">
+        Click Me
+    </button>
+    <script>
+        let Fun = function (a,b)
+                {
+                    return a + b
+                }
+        function Result()
+        {
+            let Res
+            Res = Fun(2,5)
+            console.log(Res)
+        }
+    </script>
+    <!--
+    Conculsion:-
+    Function Literal: A way to define a function using function keyword.  
+    -->
+</body>
+</html>

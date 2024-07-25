@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects - JS</title>
+</head>
+<body>
+    <!--  
+    * What are Objects in JavaScript?
+    - In JavaScript, objects are a fundamental data type that allow you to store 
+    collections of data and more complex entities. Objects can be seen as a 
+    collection of properties, where each property is a key-value pair.
+    -----------------------------------------------------------------------------
+    # Key Concepts of Objects in JavaScript:-
+    - Properties:
+    1) Properties are the values associated with an object.
+    2) A property can be a variable (e.g., a number, string, boolean) or another 
+    object.
+    3) Properties are identified by a key (or name), which is a string.
+    - Methods:
+    1) When a property of an object is a function, it is called a method.
+    2) Methods are actions that can be performed on objects.
+    - Key-Value Pairs:
+    1) An object is a set of key-value pairs, where keys are strings (or Symbols) 
+    and values can be any data type, including other objects.
+    - Dynamic Nature:
+    1) JavaScript objects are dynamic, meaning you can add, change, or delete 
+    properties after the object is created.
+    ----------------------------------------------------------------------------
+    # Note:-
+    - JavaScript is an Object Oriented Programming (OOP) language. A programming 
+    language can be called object-oriented if it provides four basic capabilities 
+    to developers:
+    1) Encapsulation: 
+    - the capability to store related information, whether data or methods, 
+    together in an object.
+    2) Aggregation: 
+    - the capability to store one object inside another object.
+    3) Inheritance: 
+    - the capability of a class to rely upon another class (or number of classes) 
+    for some of its properties and methods.
+    4) Polymorphism: 
+    - the capability to write one function or method that works in a variety of 
+    different ways.
+    > Objects are composed of attributes. If an attribute contains a function, it 
+    is considered to be a method of the object, otherwise the attribute is 
+    considered a property.
+    -----------------------------------------------------------------------------
+    * Object Properties:-
+    - In JavaScript, object properties are the fundamental units that store data 
+    in an object. Each property consists of a key (also known as a name) and a 
+    value.
+    # Object Properties
+    1) Key: A string (or Symbol) that identifies the property within the object.
+    2) Value: Any valid JavaScript data type (string, number, array, function, 
+    another object, etc.) that is associated with the key.
+    # Syntax:-
+    1) Using Object Literal Notation:-
+    const objectName = 
+    {
+    propertyName: propertyValue,
+    // or
+        propertyName: function() 
+        {
+            // function body
+        }
+    };
+    # Example:-
+    -->
+    <script>
+        const car = 
+        {
+            Make: "Toyota",
+            Model: "Corolla",
+            Year: 2020,
+            Start: function()
+            {
+                console.log("Car Started");
+            }
+        };
+        console.log(car.Make)
+        console.log(car.Model)
+        console.log(car["Year"])
+        car.Start()
+    </script>
+    <!------------------------------------------------------------------------->
+    <!--  
+    # Adding, Modifying, and Deleting Properties:-
+    1) Adding Properties
+    -You can add new properties to an existing object.
+    - Example:-
+    -->
+    <script>
+        const StuDetails = 
+        {
+            Name : "Shreya Vinod Barad"
+        }
+        StuDetails.Age = 21
+        console.log(StuDetails.Age)
+    </script>
+    <!------------------------------------------------------------------------->
+    <!--  
+    2) Modifying Properties:-
+    - You can modify existing properties.
+    - Example:-
+    -->
+    <script>
+        const StuDetails1 = 
+        {
+            Name : "Shreya Vinod Barad"
+        }
+        StuDetails1.Name = "Gouri Vinod Barad"
+        console.log(StuDetails1.Name)
+    </script>
+    <!------------------------------------------------------------------------->
+    <!--  
+    3) Deleting Properties:-
+    - To remove a property from an object, use the delete operator.
+    - Example:-
+    -->
+    <script>
+        const StuDetails2 = 
+        {
+            Name : "Shreya Vinod Barad"
+        }
+        StuDetails2.Name = "Gouri Vinod Barad"
+        delete StuDetails2.Name
+        console.log(StuDetails2.Name)
+    </script>
+    <!------------------------------------------------------------------------->
+    <!--  
+    4) Checking for Properties:-
+    - You can check if a property exists in an object using the in operator or 
+    hasOwnProperty method.
+    - Example:-
+    -->
+    <script>
+        const StuDetails3 = 
+        {
+            Name : "Shreya Vinod Barad"
+        }
+        console.log("Name" in StuDetails3)
+        console.log(StuDetails3.hasOwnProperty("Name"))
+    </script>
+    <!------------------------------------------------------------------------>
+    <!--  
+    5) Iterating Over Properties:- 
+    - To iterate over an object's properties, you can use a for...in loop.
+    - Example:-
+    -->
+    <script>
+        const StuDetails4 = 
+        {
+            Name : "Shreya Vinod Barad",
+            Age : 21,
+            Qualification: "Graduate"
+        }
+        for(let item in StuDetails4)
+        {
+            if(StuDetails4.hasOwnProperty(item))
+            {
+                console.log(`${item} - ${StuDetails4[item]}`)
+            }
+        }
+        /*
+        1) hasOwnProperty:-
+        In a for...in loop, hasOwnProperty is used to filter out inherited 
+        properties, ensuring that only the object's own properties are processed.
+        */ 
+    </script>
+    <!-------------------------------------------------------------------------->
+</body>
+</html>

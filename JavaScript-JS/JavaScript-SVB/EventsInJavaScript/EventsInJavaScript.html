@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+    <!--  
+    * Events in JavaScript:-
+    # Explanation:-
+    - JavaScript events are actions or occurrences that happen in the browser, 
+    and you can respond to them using JavaScript. These events are essential 
+    for creating interactive web pages, allowing you to execute code in 
+    response to user actions like clicks, key presses, or page loads.
+    # What Are Events?
+    - Events are things that happen on a web page. They can be triggered by the 
+    user, the browser, or the web page itself. For example:
+    1) User Events: Clicking a button, typing in a text field, or moving the 
+    mouse.
+    2) Browser Events: Loading a page, resizing a window, or closing a tab.
+    3) Page Events: Video starts playing, image fails to load, or form 
+    submission.
+    # Common Types of Events
+    1) Mouse Events
+    - click: Triggered when a user clicks on an element.
+    - dblclick: Triggered when a user double-clicks an element.
+    - mouseover: Triggered when a user moves the mouse over an element.
+    - mouseout: Triggered when a user moves the mouse away from an element.
+    2) Keyboard Events
+    - keydown: Triggered when a key is pressed down.
+    - keyup: Triggered when a key is released.
+    - keypress: Triggered when a key is pressed (captures character keys).
+    3) Form Events
+    - submit: Triggered when a form is submitted.
+    - change: Triggered when the value of an input element changes.
+    - focus: Triggered when an element gains focus (like when clicking into a 
+    text field).
+    - blur: Triggered when an element loses focus.
+    4) Window Events
+    - load: Triggered when the whole page has loaded.
+    - resize: Triggered when the browser window is resized.
+    - scroll: Triggered when the page is scrolled.
+    ------------------------------------------------------------------------------
+    1) Mouse Events - "onclick":-
+    - The onclick event is a mouse event in web development that is triggered 
+    when a user clicks on an element. This event can be used to execute a 
+    script or function when the user clicks on an HTML element, such as a 
+    button, link, image, or any other HTML element that supports user 
+    interaction.
+    # How onclick Works
+    - HTML Element: The onclick event can be added directly to an HTML element. 
+    When the element is clicked, the specified JavaScript code is executed.
+    - JavaScript Function: You can also define a separate JavaScript function 
+    and link it to the onclick event.
+    # Example:-
+    -->
+    <button onclick="Example_EventsIn_JS()">
+        Click Me
+    </button>
+    <script>
+        function Example_EventsIn_JS()
+        {
+            document.write("<h1 style = 'color: red'>Hello! Thanks for Clicking the Button!</h1>")
+        }
+    </script>
+    <!-- --------------------------------------------------------------------- -->
+    <!--  
+    2) onsubmit Event Type:-
+    # Explanation:-
+    - The onsubmit event in JavaScript is an event handler that is triggered 
+    when a form is submitted. This event allows you to run custom JavaScript 
+    code when a user submits a form, making it a useful tool for form validation, 
+    data processing, or preventing the default form submission behavior.
+    # Basic Usage:-
+    - The onsubmit event can be attached to a <form> element. When the user 
+    attempts to submit the form, the onsubmit event is fired.
+    # Eaxample:- 
+    -->
+    <script>
+        function Submit()
+        {
+            const NameOfPerson = document.forms["myForm"]["Name"].value
+            if(NameOfPerson === "")
+            {
+                alert("This field is Mandatory!")
+                return false;
+            } 
+            return true;
+        }
+    </script>
+    <form  name = "myForm" onsubmit="return Submit()">
+        Name: <input type="text" name = "Name" id="Name">
+        <input type="submit" value="Submit my Name....">
+    </form>
+    <!--
+    👆 Explanation:-
+    # HTML Structure:
+    1) Form Element: 
+    The <form> element has an onsubmit attribute that is set to call the 
+    validateForm() function.
+    2) Input Field: There is a single text input field for the username, 
+    which the user must fill in before submitting the form.
+    3) Submit Button: The form has a submit button that triggers the form 
+    submission process.  
+    ============================================================================
+    # JavaScript Validation:
+    1) Function validateForm(): 
+    This function is executed when the form is submitted.
+    2) Access Input Value: 
+    The value of the input field with the name username is retrieved using 
+    document.forms["myForm"]["username"].value.
+    3) Check for Empty Value: If the input field is empty, an alert is shown to 
+    the user, and return false; is executed to prevent the form from being 
+    submitted.
+    4) Allow Submission: If the input field is not empty, return true; is 
+    executed, allowing the form to be submitted.
+    ---------------------------------------------------------------------------
+    -->
+    <!--  
+    3) onMouseOut & onMouseIn / onMouseOver Events in JavaScript:-
+    - In JavaScript, the onMouseOut and onMouseOver (or onMouseIn) events are 
+    used to detect when the mouse pointer leaves or enters an HTML element, 
+    respectively. These events can be used to create interactive and dynamic 
+    web applications by responding to user actions with various effects like 
+    changing styles, displaying tooltips, or triggering animations.
+    1) onMouseOver / onMouseIn Event:-
+    - The onMouseOver event is triggered when the mouse pointer enters the 
+    boundary of an element. This event can be used to perform actions like 
+    highlighting an element, showing a tooltip, or changing an image.
+    2) onMouseOut Event:-
+    - The onMouseOut event is triggered when the mouse pointer leaves the 
+    boundary of an element. This event can be useful for reversing any changes 
+    made during the onMouseOver event or performing clean-up actions like hiding 
+    a tooltip.
+    ==> Example for both onMouseOver and onMouseOut:-    
+    -->
+    <div class="Text" onmouseover="onMouseOver()" onmouseout="onMouseOut()">
+        Let's see an Example of onMoueOver and onMouseOut Events in JavaScript!
+    </div>
+    <style>
+        .Text
+        {
+            color:chocolate;
+        }
+        .Text:hover
+        {
+            color:brown;
+        }
+    </style>
+    <script>
+        function onMouseOver()
+        {
+            console.log("It's onMouseOver Event!")
+        }
+        function onMouseOut()
+        {
+            console.log("It's onMouseOut Event!")
+        }
+    </script>
+    <!--  
+    # Explanation:-👆
+    - HTML: 
+    A div element with the class hover-box has both onmouseover and onmouseout 
+    event attributes.
+    - CSS: The hover-box has a background color that changes when hovered over.
+    - JavaScript: The mouseOver and mouseOut functions log messages to the 
+    console when the mouse enters or leaves the element, respectively.
+    -->
+    <!------------------------------------------------------------------------->
+</body>
+</html>
