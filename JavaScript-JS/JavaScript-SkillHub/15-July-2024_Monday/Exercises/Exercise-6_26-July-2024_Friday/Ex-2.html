@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-2</title>
+</head>
+<body>
+    <input type="text" id="Input1">
+    <input type="text" id="Input2">
+    <button onclick="Result()">
+        Click Me
+    </button>
+    <script>
+        function Result()
+        {
+            const A = document.getElementById("Input1").value
+            const B = document.getElementById("Input2").value
+            console.log(A)
+            console.log(B)
+            Input2.value = Input1.value
+            // 👆 Setter Method
+            /*
+            Setting the Input1's value to Input2
+            */ 
+        }
+    </script>
+</body>
+</html>

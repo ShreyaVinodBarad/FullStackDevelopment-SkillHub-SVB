@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Table and List</title>
+</head>
+<body>
+    <div id="Result"></div>
+    <Button onclick="displayTable()">Table</Button>
+    <Button onclick="displayList()">List</Button>
+    <script>
+        Result = document.getElementById("Result")
+        TableResult = []
+        const arr = [
+            {fname: "John", lname : "Doe"},
+            {fname: "Ross", lname : "Galler"},
+            {fname: "Rachel", lname : "Green"}
+        ]
+        function displayTable()
+        {
+
+        }
+        function displayList()
+        {
+            let str = `<ul>`
+            for(const item of arr)
+            {
+                str +=`<li>${item.fname} ${item.lname}</li>`
+            }
+            str += `</ul>`
+            Result.innerHTML= str
+        }
+    </script>
+</body>
+</html>

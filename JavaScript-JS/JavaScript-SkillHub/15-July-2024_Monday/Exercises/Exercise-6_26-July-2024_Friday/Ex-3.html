@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-3</title>
+</head>
+<body>
+    <input type="text" id="Input1">
+    <input type="text" id="Input2">
+    <div id="Output">
+    </div>
+    <script>
+        const arr = [
+            {fname: "John", lname : "Doe"},
+            {fname: "Ross", lname : "Galler"},
+            {fname: "Rachel", lname : "Green"}
+        ]
+        for(const item of arr)
+        {
+            console.log(item.fname, item.lname)
+        }
+        const a = document.getElementById("Input1")
+        const b = document.getElementById("Input2")
+        const Result = document.getElementById("Output")
+        let index = 0
+        for(const OnScreen of arr)
+        {
+            Result.innerHTML += `<div>${OnScreen.fname}, ${OnScreen.lname} 
+                                <button onclick = "AddingToInput(${index})">Edit</button></div>`
+            index++;
+        }
+        function AddingToInput(i)
+        {
+            console.log(i)
+            console.log(arr[i])
+            // 👆 Displays an Array...
+            Input1.value = arr[i].fname
+            Input2.value = arr[i].lname
+        }
+    </script>
+</body>
+</html>
+<!--  
+Here in "Input1.value", 'value' is used because in input tag we
+use value as the value for input <input value = ""> i.e. if we add input tag's 
+value attribute with a name as "Hello!" then it will display "Hello!" in the 
+input tag.
+So to change this we do:-
+Input1.value = arr[i].fname
+   
+-->
+<!--  
+Difference between inner.Text and inner.HTML:-
+                      👆                                        
+                Here it prints the complete data with tags...
+inner.HTML:- It prints the value placed inside the Tag...
+-->
