@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ex-1=> Project(Budget Planner)</title>
+        <!-- 👆 Title -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Budget Planner
+                        </div>
+                        <div class="card-body">
+                            <input type="text" placeholder="Enter the Reason..." id="Reason" class = "form-control my-2">
+                            <input type="number" placeholder="Enter the Amount..." id="Amount" class = "form-control my-2">
+                            <input type="date" id="Date" class = "form-control my-2">
+                            <select id="Select" class = "form-control my-2">
+                                <option value="" disabled selected>Choose Type</option>
+                            <!--  
+                                Here "disabled" and "selected" is used to make the option 1 i.e. Choose Type Disable.
+                            -->
+                                <option value="Debit">Debit</option>
+                                <option value="Credit">Credit</option>
+                            </select>
+                            <button onclick="handleSubmit()" class="btn btn-primary w-100 brn-lg">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">  
+                    <div class="card">
+                        <div class="body-header">
+                            Balance:<strong id="Balance"></strong>
+                            </div>
+                        <div class="card-body">
+                            <div id="Result"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+        <!-- <div class="alert alert-primary d-flex justify-content-between align-items-center">
+        </div> -->
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="EditModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="eReason" class = "form-control my-2">
+                <input type="text" id="eAmount" class = "form-control my-2">
+                <input type="text" id="eDate" class = "form-control my-2">
+                <select id="eType" class = "form-control my-2">
+                    <option disabled selected>
+                        Choose Type
+                    </option>
+                    <option value="Debit">
+                        Debit
+                    </option>
+                    <option value="Credit">
+                        Credit
+                    </option>
+                </select>
+                <button type="button" class="btn btn-primary w-100 brn-lg" onclick="Update()" data-bs-dismiss="modal">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+            let SelectedIndex
+            const Reason  = document.getElementById("Reason")
+            const Amount  = document.getElementById("Amount")
+            const Date = document.getElementById("Date")
+            const Select = document.getElementById("Select")
+            const Balance = document.getElementById("Balance")
+
+            const eReason = document.getElementById("eReason")
+            const eAmount = document.getElementById("eAmount")
+            const eDate = document.getElementById("eDate")
+            const eType = document.getElementById("eType")
+            const Account = [
+                            {Reason:"Books", Amount:350, Date:"24 - 07 - 24",Select : "Debit"},
+                            {Reason:"Rent", Amount:1350, Date:"24 - 07 - 24",Select:"Credit"},
+                            {Reason:"House-Rent", Amount:2350, Date:"24 - 07 - 24",Select:"Credit"}
+                            ]
+            
+            function handleSubmit()
+            {
+                /* 
+                console.log(Reason.value)
+                console.log(Amount.value)
+                console.log(Date.value)
+                console.log(Select.value)
+                */
+
+                Account.push({
+                    Reason:Reason.value,
+                    Amount:+Amount.value,
+                    Date:Date.value,
+                    Select:Select.value
+                });
+                // console.log(Account)
+                Display();
+            }
+
+            function Display()
+            {
+
+                let CreditSum = 0, DebitSum = 0, index=0;
+                Result.innerHTML = ""
+                for(const item of Account)
+                {
+                    if(item.Select === "Debit")
+                    {
+                        DebitSum += item.Amount
+                    }
+                    else
+                    {
+                        CreditSum += item.Amount
+                    }
+                }
+                for(const item of Account)
+                {
+                    Result.innerHTML += `
+                    <div class = "alert ${item.Select === "Credit" ? "alert-success" : "alert-danger"} ">
+                        <strong>
+                            ${item.Reason}
+                            <p>${item.Date}</p>
+                        </strong>
+                        <strong>
+                            ${item.Amount}
+                        </strong>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#EditModal" class="btn btn-outline-warning btn-sm" onclick = "handleEdit(${index})">
+                            Edit
+                        </button>
+                    </div>
+                    `
+                    index++
+                }
+                console.log(DebitSum, CreditSum)
+                Balance.innerHTML = CreditSum - DebitSum
+            }
+            function handleEdit(i){
+                SelectedIndex = i
+                // console.log(i,"Edit Clicked")
+                eReason.value = Account[i].Reason
+                eAmount.value = Account[i].Amount
+                eDate.value = Account[i].Date
+                eType.value = Account[i].Select
+            }
+            function Update(){
+                Account[SelectedIndex].Reason = eReason.value
+                Account[SelectedIndex].Amount = +eAmount.value
+                Account[SelectedIndex].Date = eDate.value
+                Account[SelectedIndex].Type = eType.value
+                Display()
+            }
+
+            Display()
+        </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
+<!--  
+X-O Game - Single- Player
+X-O Game - Multi- Player
+-->

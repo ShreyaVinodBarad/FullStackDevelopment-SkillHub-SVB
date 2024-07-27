@@ -18,6 +18,46 @@
 </head>
 <body>
     <div id="Result"></div>
+    <!--
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    fname
+                </th>
+                <th>
+                    lname
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    John
+                </td>
+                <td>
+                    Doe
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Ross
+                </td>
+                <td>
+                    Galler
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rachel
+                </td>
+                <td>
+                    Green
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    -->
     <Button onclick="displayTable()">Table</Button>
     <Button onclick="displayList()">List</Button>
     <script>
@@ -30,7 +70,36 @@
         ]
         function displayTable()
         {
-
+            let str = `
+            <table border="1">
+            <thead>
+                <tr>
+                    <th>
+                        fname
+                    </th>
+                    <th>
+                        lname
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            `;
+            for(const item of arr)
+            {
+                str += `
+            <tr>
+                <td>
+                    ${item.fname}
+                </td>
+                <td>
+                    ${item.lname}
+                </td>
+            </tr>
+                `;
+            }
+            str += `</tbody>
+            </table>`;
+            Result.innerHTML = str    
         }
         function displayList()
         {
