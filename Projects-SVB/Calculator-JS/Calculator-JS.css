@@ -1,0 +1,57 @@
+html, body
+{
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    margin: 0;
+    background-image:url(./Bg-Image/Bg-Image.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.container
+{
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+.Header
+{
+    font-size: 2.3rem;
+}
+.FormText
+{
+    font-size: 1.5rem;
+}
+.CalBtn
+{
+    font-size: 2rem;
+}
+.Label
+{
+    font-size: 1.5rem;
+}
+.Submit
+{
+    font-size: 2rem;
+
+}
+.ResultInp
+{
+    font-size: 2rem;
+}
+.Footer
+{
+    font-size: 1.5rem;
+}
+#Result
+{
+    font-size: 1.8rem;
+}
+.Output
+{
+    font-size: 2.5rem;
+}
