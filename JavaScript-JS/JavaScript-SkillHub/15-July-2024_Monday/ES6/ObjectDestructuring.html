@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <script>
+        /*
+        In object "key" name is valid for Object Destructuring not the Index
+        NUmber as of Array...
+        */
+        const obj = {name: "John", age: "23"}
+        const {name, age} = obj
+        console.log(name)
+        console.log(age)
+        /*
+        Renaming of Key Name...
+        */ 
+        const obj1 = {name1: "John", age1: "23", loc1: "London"}
+        const {name1, age1, loc1:city} = obj1
+        console.log(name1)
+        console.log(age1) 
+        // console.log(loc1) 
+        // Error 👆
+        console.log(city)
+        
+        /*
+        If u have taken an Object's element which is not declared in the 
+        object then you can provide a default value with "=" and if there 
+        is an element than it will take the value present in the Element.
+        Example:- 👇
+        */ 
+       const arr2 = {name: "Ross", Age: 23}
+       const [Name, Age = 10] = arr2
+       console.log(Age)
+   </script>
+</body>
+</html>

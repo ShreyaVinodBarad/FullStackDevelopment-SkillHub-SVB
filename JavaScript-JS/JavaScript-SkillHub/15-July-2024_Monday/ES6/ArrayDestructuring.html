@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+<body>
+    <script>
+        const arr = ["dell", "hp", "apple"]
+        // console.log(arr[0])
+                    //  👆 Can be written in this form
+        const [x, y, z] = arr
+        // 👇
+        console.log(x)
+        console.log(y)
+        console.log(z)
+        /*
+        Swapping through Array Destructuring...
+        */ 
+        let n1 = 10, n2 = 20;
+        [n1, n2] = [n2, n1];
+        console.log(n1)
+        console.log(n2)
+
+        /*
+        If u have taken an array's element which is not declared in the array
+        then you can provide a default value with "=" and if there is an element
+        than it will take the value present in the array.
+        Example:- 👇
+        */ 
+       const arr2 = [10,20]
+       const [e = 0, f, h= 30] = arr2
+       console.log(e)
+       console.log(h)
+    </script>
+</body>
+</html>

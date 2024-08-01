@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <!--  
+    1) let and const Variable
+    -->
+    <script>
+        let a = 20
+        const b = 40
+    </script>
+    <!--  
+    2) Arrow Function / Lambda Function:-
+    -->
+    <script>
+        // 👇 In Normal Function  "this" keyword "can be used..."
+        function Test(arg)
+        {
+            console.log("Function")
+        }
+        // Writing function in another way
+        // 👇 In Lambda Function "this" keyword "cannot be used..."
+        const demo = (arg) => {
+            console.log("Arrow or Lambda Function")
+        }
+        Test()
+        demo()
+        /* 
+        - If there is single argument in the Lambda Function then there is 
+        no need of Paranthesis()
+        - If you want two Arguments to pass in the Lambda Function then 
+        Paranthesisis Mandatory.
+        */
+        // ------------------------------------------------------------------
+        /*
+        - If you are having single line code and it is returning a single 
+        line code than, you can write the Lambda Function as:-
+        */
+        const dummy = (arg, arg1) => arg + arg1
+        const c = dummy(19,20)
+        console.log(c)
+    </script>
+</body>
+</html>

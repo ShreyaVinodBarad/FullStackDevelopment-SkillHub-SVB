@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - ES6</title>
+</head>
+<body>
+    <script>
+        /*
+        => Call Back
+        => Higher Order Function
+        */
+        // 👇 Higher Order Function
+                // 👇 Call Back
+        function act(arg)
+        {
+            return "Hello"
+        }
+        function react(arg)
+        {
+            return arg
+        }
+        react(19)
+        act(react)
+        
+    </script>
+    <script>
+        function test(arg)
+        {
+            return arg
+        }
+        const x = test(20)
+        /*
+        Here it will not give 10 as the answer until and unless 
+        we console.log() it...
+        */
+        console.log(x)
+    </script>
+    <script>
+        function test(arg)
+        {
+            /*
+            If return is not given in function only console log is given
+            than it will give output as "undefined"
+            */ 
+            console.log("Hello!")
+        }
+        test(10)
+    </script>
+    <script>
+        /*
+        - Write this function in Lambda Function Format:-
+        function square(num)
+        {
+        return num * num
+        }
+        */ 
+        const square  = num => num * num
+        /*
+        - Write this function in Lambda Function Format:-
+        function oddOrEven(num)
+        {
+            return num % 2 === 0 ? "Even" : "Odd"
+        }
+        */ 
+        const oddOrEven = num => num % 2 === 0 ? "Even" : "Odd"
+        /*
+        - Write this function in Lambda Function Format:-
+        function largest(num1,num2)
+        {
+            if(num1 > num2)
+            {
+            return num1
+            }
+            return num2
+        }    
+        */
+        const largest = (num1, num2) => {
+            if(num1>num2){
+                return num1
+            }
+            return num2
+        }  
+        /*
+        function sayHello()
+        {
+            return "Hello!"
+        }
+        */ 
+        const sayHello = () => "Hello!"
+    </script>
+    <script>
+        /*
+        Array Destructuring...
+        */
+        const demo = () => {}
+        const useState = (num) => {
+            return [num, demo]
+        }
+        const [count, setCount] = useState(10)
+        console.log(count)    
+        // Ans: 10 👆
+        console.log(setCount)
+        // Ans: whole function of "demo" 👆 
+        // -----------------------------------------------------------------
+        /*
+        Object Destructuring
+        */
+        const obj = {name: "John", age: "23", loc: "London"}
+        const {name, age, loc} = obj
+        console.log(name)
+        console.log(age) 
+        console.log(loc) 
+    </script>
+    <script>
+        // Combining Array and Object Restructuring:-
+        const studs = [
+            {
+                name1: "john",
+                age: 20,
+                subjects: ["HTML", "CSS"]
+            },
+            {
+                name1: "kate",
+                age: 21,
+                subjects: ["JS", "React"],
+            },
+            {
+                name1: "ross",
+                age: 22,
+                subjects: ["Node JS", "MongoDB"],
+            },
+        ]
+        const [d] = studs
+        const {name1} = d
+        const {name1:fname} = d
+        console.log(fname)
+        // Printing "JS" as an Output 👇
+        const [, f] = studs
+        const {subjects} = f
+        const [s1] = subjects
+        console.log(s1)
+    </script>
+    <script>
+        // Complicated Code
+        // Ex-1:
+        const state = {name: "Admin", role: "Admin"}
+        const useSelector = () => state
+        const {role} = useSelector()
+        console.log(role)
+        // Ex-2
+        const checkEmpty = (arg) => 
+        {
+            let isError = false, e
+            if(arg === "")
+            {
+                isError = true
+                e = "This Field is Required!"
+            }
+            return{
+                hasError:isError,
+                error:e
+            }
+        }
+        // const {hasError, error} = checkEmpty("")
+        // 👆 Ans will be: true, "This Field is Required!"
+        const {hasError, error} = checkEmpty("dell")
+        if(hasError)
+        {
+            console.log(error)
+        }
+        else
+        {
+            console.log("All Good!")
+
+        }
+    </script>
+</body>
+</html>
+<!--  
+1) Rest and Sprerad Operator
+2) Promise
+3) Array Methds
+ - map
+ - reduce
+ - filter
+ - some
+ - find
+ - findIndex
+-->
