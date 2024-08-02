@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread And rest Operator</title>
+</head>
+<body>
+    <script>
+        /*
+        Example:1)
+        */ 
+                //     👇 Rest Operator
+        const Sum = (...num) => {
+            let total = 0
+            for(const item of num)
+            {
+                total += item
+            }
+            return total
+        }
+        const x = Sum(10,20)
+        console.log(x)
+        /*
+        Example 2)
+        */
+        const ex = (brand, ...arg) =>{
+            console.log(brand)
+            console.log(arg)
+        }
+        const z = ex("Dell", 10)
+        console.log(z)
+        /*
+        Example 3) 
+        Rest Operator cannot be at the start if we define other 
+        variables after it, while defining this it will throw
+        error that if all the values are in the array than what value 
+        will be there in the argu given after ...var.    
+        const ex1 = (...arg, brand) =>{
+            console.log(brand)
+            console.log(arg)
+        }
+        const z = ex("Dell", 10)
+        console.log(z)
+        */
+        // 👆 Showing Error
+        /*
+        Example 4) 
+        */
+        const arr = ["Dell", "HP"]
+        //           👇 Spread Operator
+        console.log(...arr)
+        /*
+        Example 4)
+        Shallow Copy - 1
+        */ 
+        const arr1 = [10,20,30]
+        // x = arr1
+        // 👆 Copies Address of arr1
+        // x = [...arr1]
+        // 👆 Shallow Copy:- Copies content of the Array
+        // x.push(40)
+        console.log(x)
+        console.log(arr1)
+        /*
+        Example 5)
+        Shallow Copy - 2
+        */
+        const obj = {name: "Shreya", age: 21}
+            //          👇 Shallow Copy
+        const result = {...obj}
+        result.city = "London"
+        console.log(result)
+        console.log(obj)
+
+        /*
+        Example 6)
+        Spread example with Array and Object
+        */ 
+        // Array:-
+        const a = [10,20]
+        const b = ["Dell","HP"]
+        console.log(...a,...b)
+        // Object:-
+        const p = {name1 : "Ross"}
+        const q = {age1 : 20}
+        const r = {...p, ...q}
+        console.log(r)
+        
+        //Example 7:-
+        const o1 = {name: "Ross"}
+        const o2 = {city: "London", name : "Kate"}
+        /*
+        To get name as "Kate" Code is
+        */  
+        const o3 = {...o1,...o2}
+        console.log(o3)
+        /*
+        To get name as "Ross" code is
+        */ 
+        const o4 = {...o2,...o1}
+        console.log(o4)
+
+        /*
+        Spread => Used directly with an Array
+        Rest => Used with Functions
+        */ 
+    </script>
+</body>
+</html>
+<!--  
+03-Aug-2024, Saturday
+Promise Application - Weather App 
+-->
