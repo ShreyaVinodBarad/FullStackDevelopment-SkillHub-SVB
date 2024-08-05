@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming</title>
+</head>
+<body>
+    <script>
+        /*
+        Due to Synchronous Programming, sometimes important 
+        instructions gets blocked due to some previous instructions 
+        which causes a delay in the UI. 
+        Asynchronous code execution allows to execute next instruction
+        immediately and doesn't block the flow...
+        */
+        /*
+        API is a kind of system made to fetch data on the request
+        asked by giving a result as output.
+        Example:-
+        Fetching and Displaying data of Weather of Delhi from API.
+        */ 
+        // 1) setTimeout() Function:-
+        /*
+        Helps to decide when to execute a particular line of 
+        code.
+        Here, Timeout - Means after how many miliseconds you want 
+        your code to get executed.
+        1second ===> 1000ms
+        2second ===> 2000ms
+        */ 
+        // Method - 01 
+        setTimeout(() => {
+            console.log("Hello! Shreya here.");
+        },2000);
+        // Method - 02
+        function Name()
+        {
+            console.log(`Hello! How are you?`);
+        }
+        setTimeout(Name, 2000);
+        // Example - 01
+        console.log("1")
+        console.log("2")
+        function helloName()
+        {
+            console.log('Hello! My name is Shreya.');
+        }
+        setTimeout(helloName, 4000);
+        console.log("3")
+        console.log("4")
+        /*
+        Benefits of Asynchronous Programming:-
+        1) Your application can do multiple tasks at once.
+        2) Other executions can be done of a tasks without waiting 
+        for a code part to execute.
+        3) Users can get a better UI as they don't need to wait 
+        for a task to complete
+        */ 
+    </script>
+</body>
+</html>

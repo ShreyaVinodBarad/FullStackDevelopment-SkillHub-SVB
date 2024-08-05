@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous Programming</title>
+</head>
+<body>
+    <script>
+        /*
+        Synchronous means the code runs in a particular sequence 
+        of instructions given in the program.
+        Each instruction waits for previous instruction to complete
+        it's execution.
+        */
+        // Example:01 
+        console.log("One")
+        console.log("Two")
+        console.log("Three")
+        // 👆 All three executes line by line...
+        // Example:02
+        console.log("Start...")
+        function greet(Name)
+        {
+            return `Hello! ${Name}`
+        }
+        const message = greet("Shreya")
+        console.log(message)
+        console.log("End...")
+        /*
+        Prons of using Synchronous Programming:-
+        1) Simplicity.
+        2) Reduces the risk of unexpected results.
+        Cons of using Synchronous Programming:-
+        1) Long running tasks block the execution.
+        2) Can lead to waiting for I/O operations.
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods _ 05 -Aug -2023, Monday</title>
+</head>
+<body>
+    <script>
+        const arr = [10, 20, 30, 40]
+        // find Method in JS
+        const x = arr.find((item) => item === 50)
+        // findIndex Method in JS
+        const y = arr.findIndex((item) => item === 20)
+        console.log(x)
+        console.log(y)
+        // Don't change original array 
+        // filter Method in JS
+        const z = arr.filter((item) => item >18 && item < 35)
+        console.log(z)
+        // map Method in JS
+        /*
+        map Method is used for changing the values of the Array
+        */  
+        // const p = arr.map(item => item * item)
+        const p = arr.map(item => `<h1>${item}</h1>`)
+        console.log(p)
+    </script>
+</body>
+</html>
+<!--  
+06-Aug-2024, Tuesday
+- reduce Method in JS
+-->

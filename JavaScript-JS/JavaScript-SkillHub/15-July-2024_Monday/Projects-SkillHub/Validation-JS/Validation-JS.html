@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validation in JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">    
+                <div class="card">
+                    <div class="card-header">
+                        Login
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <input type="text" class="form-control my-2" id="fname">
+                            <span class="valid-feedback">
+                                Thank You
+                            </span>
+                            <span class="invalid-feedback">
+                                Required
+                            </span>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="lname">
+                            <span class="valid-feedback">
+                                Thank You
+                            </span>
+                            <span class="invalid-feedback">
+                                Required
+                            </span> 
+                        </div>
+                        <div>
+                            <input type="text" class="form-control my-2" id="age">
+                            <span class="valid-feedback">
+                                Thank You
+                            </span>
+                            <span class="invalid-feedback">
+                                Required
+                            </span> 
+                        </div>
+                        <!--  
+                        Here we are using two classes that are 
+                        "valid-feedback" and "invalid-feedback"
+                        which shows "Green" coloured box when passed
+                        "valid" in the class of "form-control" same when
+                        "invalid" is written in "form-control" class the 
+                        it will show red box.
+                        -->
+                        <button id = "btn" type="button" class="btn btn-primary my-2 w-100">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./Validation.js" type="module"></script>
+</body>
+</html>
